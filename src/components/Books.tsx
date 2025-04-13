@@ -1,6 +1,14 @@
 
 import React from 'react';
 import { BookOpen } from 'lucide-react';
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  CarouselNext, 
+  CarouselPrevious 
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Books = () => {
   const books = [
@@ -63,33 +71,49 @@ const Books = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          {books.map((book, index) => (
-            <div 
-              key={book.title}
-              className="group relative flex flex-col items-center"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="relative h-64 w-full perspective-500 mb-4">
-                <div className="h-full w-full preserve-3d transition-transform duration-500 group-hover:rotate-y-10 shadow-xl rounded-lg overflow-hidden">
-                  <img 
-                    src={book.cover} 
-                    alt={book.title} 
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                  <div className={`absolute inset-0 bg-gradient-to-b ${book.color} opacity-70`}></div>
-                  
-                  <div className="absolute inset-0 flex items-center justify-center p-4">
-                    <BookOpen size={32} className="text-white" />
-                  </div>
-                </div>
-              </div>
-              
-              <h3 className="text-lg font-semibold text-center text-navy-700 mb-1">{book.title}</h3>
-              <p className="text-sm text-navy-400 text-center">{book.author}</p>
-              <span className="text-xs mt-1 bg-lighthouse-100 text-lighthouse-700 px-2 py-1 rounded-full">{book.subject}</span>
+        <div className="relative mx-auto max-w-6xl px-2 md:px-0 mb-12">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {books.map((book, index) => (
+                <CarouselItem key={book.title} className="pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/3">
+                  <Card className="glass-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden h-full">
+                    <div className="relative h-80 w-full perspective-500 overflow-hidden">
+                      <div className="h-full w-full preserve-3d transition-transform duration-500 group-hover:rotate-y-10 shadow-xl rounded-lg overflow-hidden">
+                        <img 
+                          src={book.cover} 
+                          alt={book.title} 
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        <div className={`absolute inset-0 bg-gradient-to-b ${book.color} opacity-70`}></div>
+                        
+                        <div className="absolute inset-0 flex items-center justify-center p-4">
+                          <BookOpen size={40} className="text-white" />
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <CardContent className="p-6 text-center">
+                      <h3 className="text-xl md:text-2xl font-semibold text-navy-700 mb-2">{book.title}</h3>
+                      <p className="text-base md:text-lg text-navy-400 mb-2">{book.author}</p>
+                      <span className="text-sm bg-lighthouse-100 text-lighthouse-700 px-3 py-1 rounded-full inline-block">{book.subject}</span>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-10">
+              <CarouselPrevious className="h-10 w-10 md:h-12 md:w-12" />
             </div>
-          ))}
+            <div className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-10">
+              <CarouselNext className="h-10 w-10 md:h-12 md:w-12" />
+            </div>
+          </Carousel>
         </div>
       </div>
     </section>

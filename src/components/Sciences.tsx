@@ -83,7 +83,7 @@ const Sciences = () => {
           </p>
         </div>
         
-        <div className="relative px-4 md:px-10">
+        <div className="relative mx-auto max-w-6xl px-2 md:px-0 mb-12">
           <Carousel
             opts={{
               align: "start",
@@ -94,24 +94,24 @@ const Sciences = () => {
             <CarouselContent className="-ml-4">
               {sciencesList.map((science, index) => (
                 <CarouselItem key={science.name} className="pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                  <Card className="glass-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden h-full"
+                  <Card className="glass-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden h-full min-h-[320px]"
                     style={{ animationDelay: `${index * 0.1}s` }}>
-                    <div className="relative h-40 overflow-hidden">
+                    <div className="relative h-48 overflow-hidden">
                       <img 
                         src={science.image} 
                         alt={science.name} 
                         className="w-full h-full object-cover object-center"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-navy-500/70 to-transparent"></div>
-                      <div className="absolute bottom-4 left-4 bg-gradient-to-br from-lighthouse-500 to-lighthouse-600 w-12 h-12 rounded-full flex items-center justify-center text-white shadow-md">
-                        <science.icon size={20} />
+                      <div className="absolute bottom-4 left-4 bg-gradient-to-br from-lighthouse-500 to-lighthouse-600 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-md">
+                        <science.icon size={24} />
                       </div>
                     </div>
-                    <CardContent className="p-4">
-                      <h3 className="text-lg md:text-xl font-bold mb-2 text-navy-700">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl md:text-2xl font-bold mb-3 text-navy-700">
                         {science.name}
                       </h3>
-                      <p className="text-navy-400 text-sm md:text-base">
+                      <p className="text-navy-400 text-base md:text-lg">
                         {science.description}
                       </p>
                     </CardContent>
@@ -119,8 +119,12 @@ const Sciences = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2" />
-            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2" />
+            <div className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-10">
+              <CarouselPrevious className="h-10 w-10 md:h-12 md:w-12" />
+            </div>
+            <div className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-10">
+              <CarouselNext className="h-10 w-10 md:h-12 md:w-12" />
+            </div>
           </Carousel>
         </div>
       </div>
