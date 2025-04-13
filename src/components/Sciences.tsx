@@ -1,6 +1,14 @@
 
 import React from 'react';
 import { BookOpen, BookText, FileText, Heart, Landmark, Languages, PenTool, Search, Users } from 'lucide-react';
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  CarouselNext, 
+  CarouselPrevious 
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Sciences = () => {
   const sciencesList = [
@@ -8,46 +16,55 @@ const Sciences = () => {
       name: "Aqeedah",
       description: "Study of Islamic theology and beliefs",
       icon: Heart,
+      image: "https://images.unsplash.com/photo-1585951237318-9ea5e175b891?q=80&w=1000"
     },
     {
       name: "Tafsir",
       description: "Quranic exegesis and interpretation",
       icon: BookOpen,
+      image: "https://images.unsplash.com/photo-1609599006485-e3476fea5e3a?q=80&w=1000"
     },
     {
       name: "Hadith",
       description: "Prophetic traditions and narrations",
       icon: FileText,
+      image: "https://images.unsplash.com/photo-1618019349280-ec5b22aa1a5e?q=80&w=1000"
     },
     {
       name: "Fiqh",
       description: "Islamic jurisprudence and legal rulings",
       icon: Landmark,
+      image: "https://images.unsplash.com/photo-1585563058298-8e8d1156f1c2?q=80&w=1000"
     },
     {
       name: "Usul al-Fiqh",
       description: "Principles of Islamic jurisprudence",
       icon: Search,
+      image: "https://images.unsplash.com/photo-1579443411194-9608cf82a985?q=80&w=1000"
     },
     {
       name: "Seerah",
       description: "Prophetic biography and history",
       icon: Users,
+      image: "https://images.unsplash.com/photo-1604605801335-1596348aase43?q=80&w=1000"
     },
     {
       name: "Arabic Grammar",
       description: "Essential language tools for Islamic studies",
       icon: Languages,
+      image: "https://images.unsplash.com/photo-1581853245729-cb704b54a043?q=80&w=1000"
     },
     {
       name: "Tasawwuf",
       description: "Islamic spirituality and purification",
       icon: Heart,
+      image: "https://images.unsplash.com/photo-1600196341385-c49341189ef9?q=80&w=1000"
     },
     {
       name: "Mantiq",
       description: "Logic and reasoning in Islamic tradition",
       icon: PenTool,
+      image: "https://images.unsplash.com/photo-1540886450339-2fd9d783014b?q=80&w=1000"
     },
   ];
 
@@ -66,26 +83,45 @@ const Sciences = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
-          {sciencesList.map((science, index) => (
-            <div 
-              key={science.name}
-              className="glass-card p-4 md:p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="bg-gradient-to-br from-lighthouse-500 to-lighthouse-600 w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center mb-4 text-white shadow-md">
-                <science.icon size={24} className="md:w-7 md:h-7" />
-              </div>
-              
-              <h3 className="text-lg md:text-xl font-bold mb-2 text-navy-700">
-                {science.name}
-              </h3>
-              
-              <p className="text-navy-400 text-sm md:text-base">
-                {science.description}
-              </p>
-            </div>
-          ))}
+        <div className="relative px-4 md:px-10">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {sciencesList.map((science, index) => (
+                <CarouselItem key={science.name} className="pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <Card className="glass-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden h-full"
+                    style={{ animationDelay: `${index * 0.1}s` }}>
+                    <div className="relative h-40 overflow-hidden">
+                      <img 
+                        src={science.image} 
+                        alt={science.name} 
+                        className="w-full h-full object-cover object-center"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy-500/70 to-transparent"></div>
+                      <div className="absolute bottom-4 left-4 bg-gradient-to-br from-lighthouse-500 to-lighthouse-600 w-12 h-12 rounded-full flex items-center justify-center text-white shadow-md">
+                        <science.icon size={20} />
+                      </div>
+                    </div>
+                    <CardContent className="p-4">
+                      <h3 className="text-lg md:text-xl font-bold mb-2 text-navy-700">
+                        {science.name}
+                      </h3>
+                      <p className="text-navy-400 text-sm md:text-base">
+                        {science.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2" />
+            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2" />
+          </Carousel>
         </div>
       </div>
     </section>
