@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BookOpen, BookText, FileText, Heart, Landmark, Language, PenTool, Search, Users } from 'lucide-react';
+import { BookOpen, BookText, FileText, Heart, Landmark, Languages, PenTool, Search, Users } from 'lucide-react';
 
 const Sciences = () => {
   const sciencesList = [
@@ -37,7 +37,7 @@ const Sciences = () => {
     {
       name: "Arabic Grammar",
       description: "Essential language tools for Islamic studies",
-      icon: Language,
+      icon: Languages,
     },
     {
       name: "Tasawwuf",
