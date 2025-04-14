@@ -3,9 +3,7 @@ import React from 'react';
 import { 
   Carousel, 
   CarouselContent, 
-  CarouselItem, 
-  CarouselNext, 
-  CarouselPrevious 
+  CarouselItem
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -15,43 +13,37 @@ const Books = () => {
       title: "Al-Aqeedah Al-Wasitiyah",
       author: "Ibn Taymiyyah",
       subject: "Aqeedah",
-      cover: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-      color: "from-blue-500 to-blue-600"
+      cover: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
     },
     {
       title: "Matn Ibn Ashir",
       author: "Abdullah Ibn Ashir",
       subject: "Maliki Fiqh",
-      cover: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-      color: "from-green-500 to-green-600"
+      cover: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
     },
     {
       title: "Al-Ajrumiyyah",
       author: "Ibn Aajurrum",
       subject: "Arabic Grammar",
-      cover: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-      color: "from-yellow-500 to-yellow-600"
+      cover: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
     },
     {
       title: "Riyad al-Saliheen",
       author: "Imam Al-Nawawi",
       subject: "Hadith",
-      cover: "https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-      color: "from-red-500 to-red-600"
+      cover: "https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
     },
     {
       title: "Tafsir Ibn Kathir",
       author: "Ibn Kathir",
       subject: "Tafsir",
-      cover: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-      color: "from-purple-500 to-purple-600"
+      cover: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
     },
     {
       title: "Al-Waraqat",
       author: "Imam Al-Juwayni",
       subject: "Usul al-Fiqh",
-      cover: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-      color: "from-orange-500 to-orange-600"
+      cover: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
     },
   ];
 
@@ -77,23 +69,21 @@ const Books = () => {
               loop: true,
               dragFree: true,
               autoplay: true,
-              duration: 30
+              autoplaySpeed: 3000,
+              pauseOnHover: true
             }}
             className="w-full"
           >
             <CarouselContent className="-ml-4">
-              {books.map((book, index) => (
+              {books.map((book) => (
                 <CarouselItem key={book.title} className="pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/3 xl:basis-1/4">
                   <Card className="glass-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden h-full">
-                    <div className="relative h-80 w-full perspective-500 overflow-hidden">
-                      <div className="h-full w-full preserve-3d transition-transform duration-500 group-hover:rotate-y-10 shadow-xl rounded-lg overflow-hidden">
-                        <img 
-                          src={book.cover} 
-                          alt={book.title} 
-                          className="absolute inset-0 w-full h-full object-cover"
-                        />
-                        <div className={`absolute inset-0 bg-gradient-to-b ${book.color} opacity-70`}></div>
-                      </div>
+                    <div className="relative h-80 w-full overflow-hidden">
+                      <img 
+                        src={book.cover} 
+                        alt={book.title} 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     
                     <CardContent className="p-6 text-center">
@@ -105,12 +95,6 @@ const Books = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-10">
-              <CarouselPrevious className="h-10 w-10 md:h-12 md:w-12" />
-            </div>
-            <div className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-10">
-              <CarouselNext className="h-10 w-10 md:h-12 md:w-12" />
-            </div>
           </Carousel>
         </div>
       </div>
