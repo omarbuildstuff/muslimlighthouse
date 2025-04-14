@@ -89,6 +89,8 @@ const Sciences = () => {
               align: "start",
               loop: true,
               dragFree: true,
+              autoplay: true,
+              duration: 30
             }}
             className="w-full"
           >

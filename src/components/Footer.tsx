@@ -1,12 +1,12 @@
 
 import React from 'react';
-import { Facebook, Instagram, Twitter, Youtube, Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
     <footer className="bg-navy-800 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-6">
               <img 
@@ -20,66 +20,6 @@ const Footer = () => {
             <p className="text-white/70 mb-6">
               Traditional Islamic knowledge in a modern format. Learn at your own pace with structured, bite-sized lessons.
             </p>
-            
-            <div className="flex gap-4">
-              <a href="#" className="bg-navy-700 hover:bg-lighthouse-500 transition-colors p-2 rounded-full text-white">
-                <Facebook size={18} />
-              </a>
-              <a href="#" className="bg-navy-700 hover:bg-lighthouse-500 transition-colors p-2 rounded-full text-white">
-                <Instagram size={18} />
-              </a>
-              <a href="#" className="bg-navy-700 hover:bg-lighthouse-500 transition-colors p-2 rounded-full text-white">
-                <Twitter size={18} />
-              </a>
-              <a href="#" className="bg-navy-700 hover:bg-lighthouse-500 transition-colors p-2 rounded-full text-white">
-                <Youtube size={18} />
-              </a>
-            </div>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-white/70 hover:text-lighthouse-300 transition-colors">Home</a>
-              </li>
-              <li>
-                <a href="#program" className="text-white/70 hover:text-lighthouse-300 transition-colors">Program</a>
-              </li>
-              <li>
-                <a href="#sciences" className="text-white/70 hover:text-lighthouse-300 transition-colors">Islamic Sciences</a>
-              </li>
-              <li>
-                <a href="#teachers" className="text-white/70 hover:text-lighthouse-300 transition-colors">Teachers</a>
-              </li>
-              <li>
-                <a href="#testimonials" className="text-white/70 hover:text-lighthouse-300 transition-colors">Testimonials</a>
-              </li>
-              <li>
-                <a href="#pricing" className="text-white/70 hover:text-lighthouse-300 transition-colors">Pricing</a>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Resources</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-white/70 hover:text-lighthouse-300 transition-colors">Blog</a>
-              </li>
-              <li>
-                <a href="#" className="text-white/70 hover:text-lighthouse-300 transition-colors">FAQ</a>
-              </li>
-              <li>
-                <a href="#" className="text-white/70 hover:text-lighthouse-300 transition-colors">Support</a>
-              </li>
-              <li>
-                <a href="#" className="text-white/70 hover:text-lighthouse-300 transition-colors">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#" className="text-white/70 hover:text-lighthouse-300 transition-colors">Terms of Service</a>
-              </li>
-            </ul>
           </div>
           
           <div>
