@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { BookOpen } from 'lucide-react';
 import { 
   Carousel, 
   CarouselContent, 
@@ -57,8 +56,8 @@ const Books = () => {
   ];
 
   return (
-    <section className="section-padding bg-white">
-      <div className="container mx-auto">
+    <section className="section-padding bg-white w-full">
+      <div className="w-full mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Books You'll Be <span className="gradient-text">Studying</span>
@@ -71,17 +70,18 @@ const Books = () => {
           </p>
         </div>
         
-        <div className="relative mx-auto max-w-6xl px-2 md:px-0 mb-12">
+        <div className="relative w-full px-2 md:px-0 mb-12">
           <Carousel
             opts={{
               align: "start",
               loop: true,
+              dragFree: true,
             }}
             className="w-full"
           >
             <CarouselContent className="-ml-4">
               {books.map((book, index) => (
-                <CarouselItem key={book.title} className="pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/3">
+                <CarouselItem key={book.title} className="pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/3 xl:basis-1/4">
                   <Card className="glass-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden h-full">
                     <div className="relative h-80 w-full perspective-500 overflow-hidden">
                       <div className="h-full w-full preserve-3d transition-transform duration-500 group-hover:rotate-y-10 shadow-xl rounded-lg overflow-hidden">
@@ -91,10 +91,6 @@ const Books = () => {
                           className="absolute inset-0 w-full h-full object-cover"
                         />
                         <div className={`absolute inset-0 bg-gradient-to-b ${book.color} opacity-70`}></div>
-                        
-                        <div className="absolute inset-0 flex items-center justify-center p-4">
-                          <BookOpen size={40} className="text-white" />
-                        </div>
                       </div>
                     </div>
                     
