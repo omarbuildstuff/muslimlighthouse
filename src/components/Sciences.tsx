@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BookOpen, FileText, Heart, Landmark, Languages, PenTool, Search, Users } from 'lucide-react';
+import { BookOpen, BookText, FileText, Heart, Landmark, Languages, PenTool, Search, Users } from 'lucide-react';
 import { 
   Carousel, 
   CarouselContent, 
@@ -69,8 +69,8 @@ const Sciences = () => {
   ];
 
   return (
-    <section id="sciences" className="section-padding bg-lighthouse-50/50 w-full">
-      <div className="w-full mx-auto">
+    <section id="sciences" className="section-padding bg-lighthouse-50/50 px-4 md:px-6">
+      <div className="container mx-auto">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
             What You'll Be <span className="gradient-text">Learning</span>
@@ -83,14 +83,11 @@ const Sciences = () => {
           </p>
         </div>
         
-        <div className="relative w-full px-2 md:px-0 mb-12">
+        <div className="relative mx-auto max-w-6xl px-2 md:px-0 mb-12">
           <Carousel
             opts={{
               align: "start",
               loop: true,
-              dragFree: true,
-              autoplay: true,
-              duration: 30
             }}
             className="w-full"
           >
