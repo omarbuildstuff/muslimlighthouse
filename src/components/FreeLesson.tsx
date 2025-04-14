@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Play, Mail } from 'lucide-react';
+import { Play } from 'lucide-react';
 
 const FreeLesson = () => {
   return (
@@ -41,26 +41,9 @@ const FreeLesson = () => {
                 </ul>
               </div>
               
-              <form className="max-w-md">
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <div className="relative flex-1">
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-navy-300" size={18} />
-                    <input 
-                      type="email" 
-                      placeholder="Your email address" 
-                      className="w-full pl-10 pr-4 py-3 rounded-full border border-navy-200 focus:outline-none focus:ring-2 focus:ring-lighthouse-500"
-                      required
-                    />
-                  </div>
-                  
-                  <button type="submit" className="cta-button py-3 whitespace-nowrap">
-                    Get Free Lesson
-                  </button>
-                </div>
-                <p className="text-navy-400 text-sm mt-3">
-                  We'll email you the free lesson. No credit card required.
-                </p>
-              </form>
+              <a href="#video" className="cta-button inline-block py-3 px-6">
+                Watch Free Lesson
+              </a>
             </div>
             
             <div className="lg:w-1/2">
