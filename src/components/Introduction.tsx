@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Play, BookOpen } from 'lucide-react';
+import { Play } from 'lucide-react';
 
 const Introduction = () => {
   return (
@@ -31,50 +31,6 @@ const Introduction = () => {
                 alt="Program overview video" 
                 className="w-full h-full object-cover"
               />
-            </div>
-          </div>
-          
-          <div className="lg:w-1/2">
-            <h3 className="text-2xl font-bold mb-6 text-center lg:text-left">
-              Overview of the 9 Sciences
-            </h3>
-            
-            <div className="glass-card p-6 md:p-8">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="bg-lighthouse-100 p-3 rounded-full text-lighthouse-600">
-                  <BookOpen size={24} />
-                </div>
-                <div>
-                  <h4 className="text-xl font-semibold mb-2">Traditional Islamic Curriculum</h4>
-                  <p className="text-navy-400">
-                    Our curriculum follows the classical Islamic educational model, covering the essential sciences needed for a comprehensive understanding of the religion.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4 mb-6">
-                <div className="bg-lighthouse-100 p-3 rounded-full text-lighthouse-600">
-                  <BookOpen size={24} />
-                </div>
-                <div>
-                  <h4 className="text-xl font-semibold mb-2">Authentic Texts & Commentary</h4>
-                  <p className="text-navy-400">
-                    Study directly from the classical texts with expert commentary and explanation from qualified scholars who have ijazah (certification) in these works.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="bg-lighthouse-100 p-3 rounded-full text-lighthouse-600">
-                  <BookOpen size={24} />
-                </div>
-                <div>
-                  <h4 className="text-xl font-semibold mb-2">Bite-sized Daily Learning</h4>
-                  <p className="text-navy-400">
-                    Our approach breaks down complex topics into manageable daily lessons, allowing you to build knowledge consistently without feeling overwhelmed.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

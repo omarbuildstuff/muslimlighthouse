@@ -11,6 +11,7 @@ import Pricing from '@/components/Pricing';
 import ProgressCallout from '@/components/ProgressCallout';
 import FreeLesson from '@/components/FreeLesson';
 import Footer from '@/components/Footer';
+import LearningExperience from '@/components/LearningExperience';
 
 const Index = () => {
   useEffect(() => {
@@ -21,12 +22,13 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Hero />
+      <LearningExperience />
       <Introduction />
+      <Books />
       <Sciences />
       <Teachers />
       <Mauritania />
       <Testimonials />
-      <Books />
       <Pricing />
       <ProgressCallout />
       <FreeLesson />

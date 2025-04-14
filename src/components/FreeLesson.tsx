@@ -41,9 +41,9 @@ const FreeLesson = () => {
                 </ul>
               </div>
               
-              <button type="button" className="cta-button py-3">
+              <a href="#" className="cta-button inline-block py-3">
                 Get Free Lesson
-              </button>
+              </a>
             </div>
             
             <div className="lg:w-1/2">

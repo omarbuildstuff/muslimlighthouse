@@ -6,6 +6,8 @@ import {
   CarouselItem
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 const Sciences = () => {
   const sciencesList = [
@@ -72,11 +74,13 @@ const Sciences = () => {
             opts={{
               align: "start",
               loop: true,
-              dragFree: true,
-              autoplay: true,
-              autoplaySpeed: 3000,
-              pauseOnHover: true
+              dragFree: true
             }}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+              }),
+            ]}
             className="w-full"
           >
             <CarouselContent className="-ml-4">
