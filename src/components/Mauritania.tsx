@@ -34,7 +34,7 @@ const Mauritania = () => {
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-lighthouse-100 rounded-full opacity-70"></div>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-lighthouse-100 rounded-full opacity-70"></div>
               
-              <img src="https://images.unsplash.com/photo-1602190349341-3d59ddb7379b?q=80&w=1000" alt="Mauritanian scholars studying" className="w-full h-auto rounded-3xl shadow-xl relative z-10" />
+              <img alt="Mauritanian scholars studying" src="/lovable-uploads/155b36ad-21b9-4d6d-b36e-5cfbae84f3ee.png" className="w-full h-auto rounded-3xl shadow-xl relative z-10 object-contain" />
             </div>
           </div>
           
