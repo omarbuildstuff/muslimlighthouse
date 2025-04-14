@@ -1,31 +1,28 @@
-
 import React from 'react';
 import { Check, BookOpen, Video, Users, MessageSquare, FileText } from 'lucide-react';
-
 const Pricing = () => {
-  const features = [
-    { icon: BookOpen, text: "Access to all 9 Islamic sciences" },
-    { icon: Video, text: "Daily bite-sized video lessons" },
-    { icon: Users, text: "Live weekly Q&A sessions" },
-    { icon: MessageSquare, text: "Private community forum" },
-    { icon: FileText, text: "Downloadable study materials" },
-    { icon: Check, text: "Progress tracking" },
-  ];
-
-  return (
-    <section id="pricing" className="section-padding bg-lighthouse-50/50">
+  const features = [{
+    icon: BookOpen,
+    text: "Access to all 9 Islamic sciences"
+  }, {
+    icon: Video,
+    text: "Daily bite-sized video lessons"
+  }, {
+    icon: Users,
+    text: "Live weekly Q&A sessions"
+  }, {
+    icon: MessageSquare,
+    text: "Private community forum"
+  }, {
+    icon: FileText,
+    text: "Downloadable study materials"
+  }, {
+    icon: Check,
+    text: "Progress tracking"
+  }];
+  return <section id="pricing" className="section-padding bg-lighthouse-50/50">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Simple <span className="gradient-text">Pricing</span>
-          </h2>
-          
-          <div className="divider"></div>
-          
-          <p className="text-navy-400 max-w-3xl mx-auto text-lg">
-            Invest in your Islamic education with our straightforward subscription plan.
-          </p>
-        </div>
+        
         
         <div className="max-w-4xl mx-auto">
           <div className="glass-card overflow-hidden">
@@ -41,14 +38,12 @@ const Pricing = () => {
             
             <div className="p-8 md:p-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                {features.map((feature) => (
-                  <div key={feature.text} className="flex items-center gap-4">
+                {features.map(feature => <div key={feature.text} className="flex items-center gap-4">
                     <div className="bg-lighthouse-100 p-2 rounded-full text-lighthouse-600">
                       <feature.icon size={18} />
                     </div>
                     <span className="text-navy-600">{feature.text}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
               
               <div className="bg-navy-50 rounded-xl p-6 mb-8">
@@ -88,8 +83,6 @@ const Pricing = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Pricing;
