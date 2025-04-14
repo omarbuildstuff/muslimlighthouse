@@ -1,17 +1,21 @@
 
 import React from 'react';
+import { BookOpen, GraduationCap, Users } from 'lucide-react';
 
 const Mauritania = () => {
   const features = [
     {
+      icon: BookOpen,
       title: "Preservation of Traditional Texts",
       description: "Mauritania is known for its preservation of classical Islamic texts and manuscripts, maintaining chains of transmission that extend back centuries."
     },
     {
+      icon: GraduationCap,
       title: "Rigorous Memorization",
       description: "Students in the Mauritanian tradition memorize entire texts before studying their meanings, creating a strong foundation for deeper understanding."
     },
     {
+      icon: Users,
       title: "Student-Teacher Relationship",
       description: "The Mauritanian model emphasizes close relationships between teachers and students, with individual attention and personalized guidance."
     }
@@ -53,9 +57,15 @@ const Mauritania = () => {
             
             <div className="space-y-8">
               {features.map((feature) => (
-                <div key={feature.title} className="border-l-4 border-lighthouse-300 pl-4">
-                  <h3 className="text-xl font-semibold mb-2 text-navy-700">{feature.title}</h3>
-                  <p className="text-navy-400">{feature.description}</p>
+                <div key={feature.title} className="flex gap-4">
+                  <div className="bg-lighthouse-100 p-3 h-14 rounded-2xl flex items-center justify-center text-lighthouse-600 shrink-0">
+                    <feature.icon size={24} />
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2 text-navy-700">{feature.title}</h3>
+                    <p className="text-navy-400">{feature.description}</p>
+                  </div>
                 </div>
               ))}
             </div>

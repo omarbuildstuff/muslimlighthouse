@@ -1,5 +1,6 @@
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
+import { BookOpen, FileText, Heart, Landmark, Languages, PenTool, Search, Users } from 'lucide-react';
 import { 
   Carousel, 
   CarouselContent, 
@@ -14,70 +15,62 @@ const Sciences = () => {
     {
       name: "Aqeedah",
       description: "Study of Islamic theology and beliefs",
+      icon: Heart,
       image: "https://images.unsplash.com/photo-1585951237318-9ea5e175b891?q=80&w=1000"
     },
     {
       name: "Tafsir",
       description: "Quranic exegesis and interpretation",
+      icon: BookOpen,
       image: "https://images.unsplash.com/photo-1609599006485-e3476fea5e3a?q=80&w=1000"
     },
     {
       name: "Hadith",
       description: "Prophetic traditions and narrations",
+      icon: FileText,
       image: "https://images.unsplash.com/photo-1618019349280-ec5b22aa1a5e?q=80&w=1000"
     },
     {
       name: "Fiqh",
       description: "Islamic jurisprudence and legal rulings",
+      icon: Landmark,
       image: "https://images.unsplash.com/photo-1585563058298-8e8d1156f1c2?q=80&w=1000"
     },
     {
       name: "Usul al-Fiqh",
       description: "Principles of Islamic jurisprudence",
+      icon: Search,
       image: "https://images.unsplash.com/photo-1579443411194-9608cf82a985?q=80&w=1000"
     },
     {
       name: "Seerah",
       description: "Prophetic biography and history",
+      icon: Users,
       image: "https://images.unsplash.com/photo-1604605801335-1596348aase43?q=80&w=1000"
     },
     {
       name: "Arabic Grammar",
       description: "Essential language tools for Islamic studies",
+      icon: Languages,
       image: "https://images.unsplash.com/photo-1581853245729-cb704b54a043?q=80&w=1000"
     },
     {
       name: "Tasawwuf",
       description: "Islamic spirituality and purification",
+      icon: Heart,
       image: "https://images.unsplash.com/photo-1600196341385-c49341189ef9?q=80&w=1000"
     },
     {
       name: "Mantiq",
       description: "Logic and reasoning in Islamic tradition",
+      icon: PenTool,
       image: "https://images.unsplash.com/photo-1540886450339-2fd9d783014b?q=80&w=1000"
     },
   ];
 
-  const carouselRef = useRef<HTMLDivElement>(null);
-  const apiRef = useRef<any>(null);
-
-  useEffect(() => {
-    if (apiRef.current) {
-      const interval = setInterval(() => {
-        if (apiRef.current.canScrollNext()) {
-          apiRef.current.scrollNext();
-        } else {
-          apiRef.current.scrollTo(0);
-        }
-      }, 3000);
-
-      return () => clearInterval(interval);
-    }
-  }, [apiRef]);
-
   return (
-    <section id="sciences" className="section-padding bg-lighthouse-50/50 px-4 md:px-6">
-      <div className="container mx-auto">
+    <section id="sciences" className="section-padding bg-lighthouse-50/50 w-full">
+      <div className="w-full mx-auto">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
             What You'll Be <span className="gradient-text">Learning</span>
@@ -90,15 +83,14 @@ const Sciences = () => {
           </p>
         </div>
         
-        <div className="relative mx-auto max-w-6xl px-2 md:px-0 mb-12">
+        <div className="relative w-full px-2 md:px-0 mb-12">
           <Carousel
-            ref={carouselRef}
-            setApi={(api) => {
-              apiRef.current = api;
-            }}
             opts={{
               align: "start",
               loop: true,
+              dragFree: true,
+              autoplay: true,
+              duration: 30
             }}
             className="w-full"
           >
@@ -114,6 +106,9 @@ const Sciences = () => {
                         className="w-full h-full object-cover object-center"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-navy-500/70 to-transparent"></div>
+                      <div className="absolute bottom-4 left-4 bg-gradient-to-br from-lighthouse-500 to-lighthouse-600 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-md">
+                        <science.icon size={24} />
+                      </div>
                     </div>
                     <CardContent className="p-6">
                       <h3 className="text-xl md:text-2xl font-bold mb-3 text-navy-700">

@@ -8,7 +8,6 @@ import {
   CarouselPrevious 
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import { useEffect, useRef } from 'react';
 
 const Books = () => {
   const books = [
@@ -56,26 +55,9 @@ const Books = () => {
     },
   ];
 
-  const carouselRef = useRef<HTMLDivElement>(null);
-  const apiRef = useRef<any>(null);
-
-  useEffect(() => {
-    if (apiRef.current) {
-      const interval = setInterval(() => {
-        if (apiRef.current.canScrollNext()) {
-          apiRef.current.scrollNext();
-        } else {
-          apiRef.current.scrollTo(0);
-        }
-      }, 3000);
-
-      return () => clearInterval(interval);
-    }
-  }, [apiRef]);
-
   return (
-    <section className="section-padding bg-white">
-      <div className="container mx-auto">
+    <section className="section-padding bg-white w-full">
+      <div className="w-full mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Books You'll Be <span className="gradient-text">Studying</span>
@@ -88,29 +70,30 @@ const Books = () => {
           </p>
         </div>
         
-        <div className="relative mx-auto max-w-6xl px-2 md:px-0 mb-12">
+        <div className="relative w-full px-2 md:px-0 mb-12">
           <Carousel
-            ref={carouselRef}
-            setApi={(api) => {
-              apiRef.current = api;
-            }}
             opts={{
               align: "start",
               loop: true,
+              dragFree: true,
+              autoplay: true,
+              duration: 30
             }}
             className="w-full"
           >
             <CarouselContent className="-ml-4">
               {books.map((book, index) => (
-                <CarouselItem key={book.title} className="pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/3">
+                <CarouselItem key={book.title} className="pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/3 xl:basis-1/4">
                   <Card className="glass-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden h-full">
                     <div className="relative h-80 w-full perspective-500 overflow-hidden">
-                      <img 
-                        src={book.cover} 
-                        alt={book.title} 
-                        className="absolute inset-0 w-full h-full object-cover"
-                      />
-                      <div className={`absolute inset-0 bg-gradient-to-b ${book.color} opacity-70`}></div>
+                      <div className="h-full w-full preserve-3d transition-transform duration-500 group-hover:rotate-y-10 shadow-xl rounded-lg overflow-hidden">
+                        <img 
+                          src={book.cover} 
+                          alt={book.title} 
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        <div className={`absolute inset-0 bg-gradient-to-b ${book.color} opacity-70`}></div>
+                      </div>
                     </div>
                     
                     <CardContent className="p-6 text-center">
