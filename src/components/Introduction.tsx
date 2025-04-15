@@ -1,8 +1,17 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Play } from 'lucide-react';
+
 const Introduction = () => {
-  return <section id="program" className="section-padding bg-white">
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoId = "RNMH13-lG0o";
+
+  const handlePlayClick = () => {
+    setIsPlaying(true);
+  };
+
+  return (
+    <section id="program" className="section-padding bg-white">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -18,17 +27,39 @@ const Introduction = () => {
         
         <div className="flex flex-col gap-12 items-center">
           <div className="lg:w-1/2 max-w-3xl mx-auto">
-            <div className="video-container bg-navy-50 relative overflow-hidden rounded-3xl shadow-xl">
-              <div className="absolute inset-0 flex items-center justify-center bg-navy-500/20 hover:bg-navy-500/10 transition-colors cursor-pointer group">
-                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                  <Play size={24} className="fill-lighthouse-500 ml-1" />
-                </div>
-              </div>
-              <img src="https://img.youtube.com/vi/RNMH13-lG0o/maxresdefault.jpg" alt="Program overview video" className="w-full h-full object-cover" />
+            <div className="video-container bg-navy-50 relative overflow-hidden rounded-3xl shadow-xl aspect-video">
+              {isPlaying ? (
+                <iframe 
+                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                  title="Program overview video" 
+                  className="absolute top-0 left-0 w-full h-full border-0"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              ) : (
+                <>
+                  <div 
+                    className="absolute inset-0 flex items-center justify-center bg-navy-500/20 hover:bg-navy-500/10 transition-colors cursor-pointer group"
+                    onClick={handlePlayClick}
+                  >
+                    <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                      <Play size={24} className="fill-lighthouse-500 ml-1" />
+                    </div>
+                  </div>
+                  <img 
+                    src="https://img.youtube.com/vi/RNMH13-lG0o/maxresdefault.jpg" 
+                    alt="Program overview video" 
+                    className="w-full h-full object-cover" 
+                  />
+                </>
+              )}
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Introduction;

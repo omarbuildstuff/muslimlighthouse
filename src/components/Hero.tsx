@@ -1,8 +1,15 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Play } from 'lucide-react';
 
 const Hero = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoId = "p6_2s_357_Q";
+
+  const handlePlayClick = () => {
+    setIsPlaying(true);
+  };
+
   return (
     <section className="pt-16 pb-16 md:pt-24 md:pb-20 lg:pt-32 lg:pb-32 px-4 md:px-6 bg-gradient-to-b from-lighthouse-50/50 to-white min-h-screen flex items-center">
       <div className="container mx-auto">
@@ -29,17 +36,33 @@ const Hero = () => {
           </div>
           
           <div className="w-full max-w-3xl animate-float">
-            <div className="video-container overflow-hidden rounded-2xl md:rounded-3xl shadow-xl border-2 md:border-4 border-white">
-              <div className="absolute inset-0 flex items-center justify-center bg-navy-500/20 hover:bg-navy-500/10 transition-colors cursor-pointer group">
-                <div className="w-14 h-14 md:w-20 md:h-20 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                  <Play size={20} className="fill-lighthouse-500 ml-1 md:w-[30px] md:h-[30px]" />
-                </div>
-              </div>
-              <img 
-                src="https://img.youtube.com/vi/p6_2s_357_Q/maxresdefault.jpg" 
-                alt="Islamic education video preview" 
-                className="w-full h-full object-cover"
-              />
+            <div className="video-container overflow-hidden rounded-2xl md:rounded-3xl shadow-xl border-2 md:border-4 border-white aspect-video">
+              {isPlaying ? (
+                <iframe 
+                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                  title="Islamic education video" 
+                  className="absolute top-0 left-0 w-full h-full border-0"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              ) : (
+                <>
+                  <div 
+                    className="absolute inset-0 flex items-center justify-center bg-navy-500/20 hover:bg-navy-500/10 transition-colors cursor-pointer group"
+                    onClick={handlePlayClick}
+                  >
+                    <div className="w-14 h-14 md:w-20 md:h-20 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                      <Play size={20} className="fill-lighthouse-500 ml-1 md:w-[30px] md:h-[30px]" />
+                    </div>
+                  </div>
+                  <img 
+                    src="https://img.youtube.com/vi/p6_2s_357_Q/maxresdefault.jpg" 
+                    alt="Islamic education video preview" 
+                    className="w-full h-full object-cover"
+                  />
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -49,4 +72,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
