@@ -3,7 +3,7 @@ import React from 'react';
 import { Play } from 'lucide-react';
 const Introduction = () => {
   return <section id="program" className="section-padding bg-white">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Your path to becoming of the <span className="gradient-text">knowledgeable...</span>
@@ -17,7 +17,7 @@ const Introduction = () => {
         </div>
         
         <div className="flex flex-col gap-12 items-center">
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 max-w-3xl mx-auto">
             <div className="video-container bg-navy-50 relative overflow-hidden rounded-3xl shadow-xl">
               <div className="absolute inset-0 flex items-center justify-center bg-navy-500/20 hover:bg-navy-500/10 transition-colors cursor-pointer group">
                 <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
@@ -32,4 +32,3 @@ const Introduction = () => {
     </section>;
 };
 export default Introduction;
-

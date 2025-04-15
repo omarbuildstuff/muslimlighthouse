@@ -60,7 +60,7 @@ const Sciences = () => {
 
   return (
     <section id="sciences" className="section-padding bg-lighthouse-50/50 w-full">
-      <div className="w-full mx-auto">
+      <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
             What You'll Be <span className="gradient-text">Learning</span>
@@ -69,7 +69,7 @@ const Sciences = () => {
           <div className="divider"></div>
         </div>
         
-        <div className="relative w-full px-2 md:px-0 mb-12">
+        <div className="relative w-full mb-12 max-w-6xl mx-auto">
           <Carousel
             opts={{
               align: "start",
@@ -78,7 +78,9 @@ const Sciences = () => {
             }}
             plugins={[
               Autoplay({
-                delay: 3000,
+                delay: 2000,
+                stopOnInteraction: false,
+                stopOnMouseEnter: false,
               }),
             ]}
             className="w-full"

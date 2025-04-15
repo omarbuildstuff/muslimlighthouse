@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Briefcase, GraduationCap, Globe } from 'lucide-react';
 const Teachers = () => {
@@ -5,7 +6,7 @@ const Teachers = () => {
     name: "Ustadh Ehsan",
     role: "Primary Instructor",
     bio: "Ustadh Ehsan has studied under scholars in Mauritania, Egypt and Jordan. He specializes in Aqeedah and Tafsir, with ijazahs in multiple classical texts. His teaching style combines deep knowledge with clarity and accessibility.",
-    image: "https://images.unsplash.com/photo-1600486913747-55e5470d6f40?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "https://images.unsplash.com/photo-1600486913747-55e5323a6f40?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
     credentials: [{
       icon: GraduationCap,
       text: "Ijazah in multiple classical texts"
@@ -33,7 +34,7 @@ const Teachers = () => {
     }]
   }];
   return <section id="teachers" className="section-padding bg-white">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Your <span className="gradient-text">Teachers</span>
@@ -46,7 +47,7 @@ const Teachers = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {teachers.map(teacher => <div key={teacher.name} className="glass-card overflow-hidden group">
               <div className="h-64 overflow-hidden">
                 <img src={teacher.image} alt={teacher.name} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />

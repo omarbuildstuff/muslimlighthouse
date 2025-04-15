@@ -51,7 +51,7 @@ const Books = () => {
 
   return (
     <section className="section-padding bg-white w-full">
-      <div className="w-full mx-auto">
+      <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Books You'll Be <span className="gradient-text">Studying</span>
@@ -64,7 +64,7 @@ const Books = () => {
           </p>
         </div>
         
-        <div className="relative w-full px-2 md:px-0 mb-12">
+        <div className="relative w-full mb-12 max-w-6xl mx-auto">
           <Carousel
             opts={{
               align: "start",
@@ -73,14 +73,16 @@ const Books = () => {
             }}
             plugins={[
               Autoplay({
-                delay: 3000,
+                delay: 2000,
+                stopOnInteraction: false,
+                stopOnMouseEnter: false,
               }),
             ]}
             className="w-full"
           >
             <CarouselContent className="-ml-4">
               {books.map((book) => (
-                <CarouselItem key={book.title} className="pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/3 xl:basis-1/4">
+                <CarouselItem key={book.title} className="pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
                   <Card className="glass-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden h-full">
                     <div className="relative h-80 w-full overflow-hidden">
                       <img 
