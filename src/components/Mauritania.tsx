@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BookOpen, GraduationCap, Users } from 'lucide-react';
 const Mauritania = () => {
@@ -15,7 +16,7 @@ const Mauritania = () => {
     description: "The Mauritanian model emphasizes close relationships between teachers and students, with individual attention and personalized guidance."
   }];
   return <section className="section-padding bg-gradient-to-b from-white to-lighthouse-50/50">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Why is <span className="gradient-text">Mauritania</span> Special?
@@ -28,7 +29,7 @@ const Mauritania = () => {
           </p>
         </div>
         
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
+        <div className="flex flex-col lg:flex-row gap-12 items-center max-w-5xl mx-auto">
           <div className="lg:w-1/2">
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-lighthouse-100 rounded-full opacity-70"></div>

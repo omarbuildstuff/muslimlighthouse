@@ -47,7 +47,7 @@ const Teachers = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           {teachers.map(teacher => <div key={teacher.name} className="glass-card overflow-hidden group">
               <div className="h-64 overflow-hidden">
                 <img src={teacher.image} alt={teacher.name} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />

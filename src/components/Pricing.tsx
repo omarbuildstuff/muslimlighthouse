@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Check, BookOpen, Video, Users, MessageSquare, FileText } from 'lucide-react';
 const Pricing = () => {
@@ -21,10 +22,10 @@ const Pricing = () => {
     text: "Progress tracking"
   }];
   return <section id="pricing" className="section-padding bg-lighthouse-50/50">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         
         
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <div className="glass-card overflow-hidden">
             <div className="bg-gradient-to-r from-lighthouse-600 to-lighthouse-500 py-8 px-6 text-white text-center">
               <h3 className="text-3xl font-bold mb-2">Monthly Subscription</h3>
