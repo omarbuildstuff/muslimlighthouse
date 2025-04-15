@@ -36,7 +36,7 @@ const Hero = () => {
                 </div>
               </div>
               <img 
-                src="https://images.unsplash.com/photo-1566993249945-79dfe5323a18?q=80&w=1000" 
+                src="https://img.youtube.com/vi/p6_2s_357_Q/maxresdefault.jpg" 
                 alt="Islamic education video preview" 
                 className="w-full h-full object-cover"
               />
@@ -49,3 +49,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

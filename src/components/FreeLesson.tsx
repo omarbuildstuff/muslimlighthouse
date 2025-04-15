@@ -17,30 +17,6 @@ const FreeLesson = () => {
                 Not sure if Muslim Lighthouse is right for you? Get a taste of our teaching style and content quality with a free lesson from our Aqeedah course.
               </p>
               
-              <div className="bg-lighthouse-50 rounded-2xl p-6 mb-8">
-                <h3 className="text-xl font-semibold mb-3 text-navy-700">What you'll learn in this free lesson:</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <div className="bg-lighthouse-100 p-1 rounded-full text-lighthouse-600 mt-1">
-                      <Play size={14} />
-                    </div>
-                    <span className="text-navy-600">The meaning of Tawhid and its importance</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="bg-lighthouse-100 p-1 rounded-full text-lighthouse-600 mt-1">
-                      <Play size={14} />
-                    </div>
-                    <span className="text-navy-600">How to develop a strong foundation in Islamic beliefs</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="bg-lighthouse-100 p-1 rounded-full text-lighthouse-600 mt-1">
-                      <Play size={14} />
-                    </div>
-                    <span className="text-navy-600">A glimpse of our teaching methodology</span>
-                  </li>
-                </ul>
-              </div>
-              
               <a href="#" className="cta-button inline-block py-3">
                 Get Free Lesson
               </a>
@@ -54,7 +30,7 @@ const FreeLesson = () => {
                   </div>
                 </div>
                 <img 
-                  src="https://images.unsplash.com/photo-1479142506502-19b3a3b7ff33?q=80&w=1000" 
+                  src="https://img.youtube.com/vi/w-w47CSUuIo/maxresdefault.jpg" 
                   alt="Free lesson preview" 
                   className="w-full h-full object-cover"
                 />
@@ -68,3 +44,4 @@ const FreeLesson = () => {
 };
 
 export default FreeLesson;
+

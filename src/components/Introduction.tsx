@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Play } from 'lucide-react';
 const Introduction = () => {
@@ -23,7 +24,7 @@ const Introduction = () => {
                   <Play size={24} className="fill-lighthouse-500 ml-1" />
                 </div>
               </div>
-              <img src="https://images.unsplash.com/photo-1585036156261-1e2ac055364c?q=80&w=1000" alt="Program overview video" className="w-full h-full object-cover" />
+              <img src="https://img.youtube.com/vi/RNMH13-lG0o/maxresdefault.jpg" alt="Program overview video" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -31,3 +32,4 @@ const Introduction = () => {
     </section>;
 };
 export default Introduction;
+
