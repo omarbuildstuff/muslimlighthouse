@@ -15,6 +15,14 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -47,8 +55,9 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-navy-500"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="md:hidden text-navy-500 p-2"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -61,42 +70,42 @@ const Header = () => {
             <a 
               href="#program" 
               className="text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={closeMobileMenu}
             >
               Program
             </a>
             <a 
               href="#sciences" 
               className="text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={closeMobileMenu}
             >
               Sciences
             </a>
             <a 
               href="#teachers" 
               className="text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={closeMobileMenu}
             >
               Teachers
             </a>
             <a 
               href="#testimonials" 
               className="text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={closeMobileMenu}
             >
               Testimonials
             </a>
             <a 
               href="#pricing" 
               className="text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={closeMobileMenu}
             >
               Pricing
             </a>
             <a 
               href="#join-now" 
               className="cta-button py-2 px-6 w-4/5 text-center"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={closeMobileMenu}
             >
               Join Now
             </a>
