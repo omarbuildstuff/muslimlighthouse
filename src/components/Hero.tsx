@@ -1,19 +1,14 @@
-
 import React, { useState } from 'react';
 import { Play } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-
 const Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoId = "p6_2s_357_Q";
-
   const handlePlayClick = () => {
     setIsPlaying(true);
   };
-
-  return (
-    <section className="pt-16 pb-16 md:pt-24 md:pb-20 lg:pt-32 lg:pb-32 px-4 md:px-6 bg-gradient-to-b from-lighthouse-50/50 to-white min-h-screen flex items-center">
-      <div className="container mx-auto">
+  return <section className="pt-16 pb-16 md:pt-24 md:pb-20 lg:pt-32 lg:pb-32 px-4 md:px-6 bg-gradient-to-b from-lighthouse-50/50 to-white min-h-screen flex items-center">
+      <div className="container mx-auto mt-48">
         <div className="flex flex-col items-center gap-8 md:gap-12 text-center">
           <div className="w-full max-w-4xl">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
@@ -38,40 +33,20 @@ const Hero = () => {
           
           <div className="w-full max-w-3xl animate-float">
             <div className="video-container overflow-hidden rounded-2xl md:rounded-3xl shadow-xl border-2 md:border-4 border-white">
-              {isPlaying ? (
-                <div className="w-full aspect-video">
-                  <iframe 
-                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-                    title="Islamic education video" 
-                    className="w-full h-full absolute inset-0"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              ) : (
-                <AspectRatio ratio={16 / 9}>
-                  <div 
-                    className="absolute inset-0 flex items-center justify-center bg-navy-500/20 hover:bg-navy-500/10 transition-colors cursor-pointer group"
-                    onClick={handlePlayClick}
-                  >
+              {isPlaying ? <div className="w-full aspect-video">
+                  <iframe src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} title="Islamic education video" className="w-full h-full absolute inset-0" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                </div> : <AspectRatio ratio={16 / 9}>
+                  <div className="absolute inset-0 flex items-center justify-center bg-navy-500/20 hover:bg-navy-500/10 transition-colors cursor-pointer group" onClick={handlePlayClick}>
                     <div className="w-14 h-14 md:w-20 md:h-20 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
                       <Play size={20} className="fill-lighthouse-500 ml-1 md:w-[30px] md:h-[30px]" />
                     </div>
                   </div>
-                  <img 
-                    src="https://img.youtube.com/vi/p6_2s_357_Q/maxresdefault.jpg" 
-                    alt="Islamic education video preview" 
-                    className="w-full h-full object-cover"
-                  />
-                </AspectRatio>
-              )}
+                  <img src="https://img.youtube.com/vi/p6_2s_357_Q/maxresdefault.jpg" alt="Islamic education video preview" className="w-full h-full object-cover" />
+                </AspectRatio>}
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
