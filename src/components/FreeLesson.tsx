@@ -21,7 +21,7 @@ const FreeLesson = () => {
               </p>
             </div>
             
-            <div className="lg:w-1/2 max-w-3xl w-full">
+            <div className="lg:w-3/4 max-w-3xl w-full">
               <div className="video-container relative overflow-hidden rounded-3xl shadow-xl border-4 border-white">
                 {isPlaying ? <div className="w-full aspect-video">
                     <iframe src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} title="Free lesson preview" className="w-full h-full absolute inset-0" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
