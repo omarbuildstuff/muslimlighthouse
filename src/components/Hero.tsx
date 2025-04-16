@@ -7,7 +7,7 @@ const Hero = () => {
   const handlePlayClick = () => {
     setIsPlaying(true);
   };
-  return <section className="pt-16 pb-16 md:pt-24 md:pb-20 lg:pt-32 lg:pb-32 px-4 md:px-6 bg-gradient-to-b from-lighthouse-50/50 to-white min-h-screen flex items-center">
+  return <section className="pt-16 pb-5 md:pt-24 md:pb-20 lg:pt-32 lg:pb-32 px-4 md:px-6 bg-gradient-to-b from-lighthouse-50/50 to-white min-h-screen flex items-center">
       <div className="container mx-auto mt-10">
         <div className="flex flex-col items-center text-center">
           <div className="w-full max-w-4xl">
