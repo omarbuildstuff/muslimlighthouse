@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Play } from 'lucide-react';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const Introduction = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -27,18 +28,20 @@ const Introduction = () => {
         
         <div className="flex flex-col gap-12 items-center">
           <div className="lg:w-1/2 max-w-3xl mx-auto">
-            <div className="video-container bg-navy-50 relative overflow-hidden rounded-3xl shadow-xl aspect-video">
+            <div className="video-container bg-navy-50 relative overflow-hidden rounded-3xl shadow-xl">
               {isPlaying ? (
-                <iframe 
-                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-                  title="Program overview video" 
-                  className="absolute top-0 left-0 w-full h-full border-0"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <AspectRatio ratio={16 / 9}>
+                  <iframe 
+                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                    title="Program overview video" 
+                    className="w-full h-full absolute inset-0"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </AspectRatio>
               ) : (
-                <>
+                <AspectRatio ratio={16 / 9}>
                   <div 
                     className="absolute inset-0 flex items-center justify-center bg-navy-500/20 hover:bg-navy-500/10 transition-colors cursor-pointer group"
                     onClick={handlePlayClick}
@@ -52,7 +55,7 @@ const Introduction = () => {
                     alt="Program overview video" 
                     className="w-full h-full object-cover" 
                   />
-                </>
+                </AspectRatio>
               )}
             </div>
           </div>

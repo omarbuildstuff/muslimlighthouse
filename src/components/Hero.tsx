@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Play } from 'lucide-react';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -36,18 +37,20 @@ const Hero = () => {
           </div>
           
           <div className="w-full max-w-3xl animate-float">
-            <div className="video-container overflow-hidden rounded-2xl md:rounded-3xl shadow-xl border-2 md:border-4 border-white aspect-video">
+            <div className="video-container overflow-hidden rounded-2xl md:rounded-3xl shadow-xl border-2 md:border-4 border-white">
               {isPlaying ? (
-                <iframe 
-                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-                  title="Islamic education video" 
-                  className="absolute top-0 left-0 w-full h-full border-0"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <AspectRatio ratio={16 / 9}>
+                  <iframe 
+                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                    title="Islamic education video" 
+                    className="w-full h-full absolute inset-0"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </AspectRatio>
               ) : (
-                <>
+                <AspectRatio ratio={16 / 9}>
                   <div 
                     className="absolute inset-0 flex items-center justify-center bg-navy-500/20 hover:bg-navy-500/10 transition-colors cursor-pointer group"
                     onClick={handlePlayClick}
@@ -61,7 +64,7 @@ const Hero = () => {
                     alt="Islamic education video preview" 
                     className="w-full h-full object-cover"
                   />
-                </>
+                </AspectRatio>
               )}
             </div>
           </div>
