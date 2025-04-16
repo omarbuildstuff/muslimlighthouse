@@ -26,10 +26,10 @@ const FreeLesson = () => {
               </p>
             </div>
             
-            <div className="lg:w-1/2 max-w-xl">
+            <div className="lg:w-1/2 max-w-xl w-full">
               <div className="video-container relative overflow-hidden rounded-3xl shadow-xl border-4 border-white">
                 {isPlaying ? (
-                  <AspectRatio ratio={16 / 9}>
+                  <div className="w-full aspect-video">
                     <iframe 
                       src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} 
                       title="Free lesson preview" 
@@ -38,7 +38,7 @@ const FreeLesson = () => {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                       allowFullScreen
                     ></iframe>
-                  </AspectRatio>
+                  </div>
                 ) : (
                   <AspectRatio ratio={16 / 9}>
                     <div 

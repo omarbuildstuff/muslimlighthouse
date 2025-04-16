@@ -30,7 +30,7 @@ const Introduction = () => {
           <div className="lg:w-1/2 max-w-3xl mx-auto">
             <div className="video-container bg-navy-50 relative overflow-hidden rounded-3xl shadow-xl">
               {isPlaying ? (
-                <AspectRatio ratio={16 / 9}>
+                <div className="w-full aspect-video">
                   <iframe 
                     src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
                     title="Program overview video" 
@@ -39,7 +39,7 @@ const Introduction = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
-                </AspectRatio>
+                </div>
               ) : (
                 <AspectRatio ratio={16 / 9}>
                   <div 

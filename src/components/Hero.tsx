@@ -39,7 +39,7 @@ const Hero = () => {
           <div className="w-full max-w-3xl animate-float">
             <div className="video-container overflow-hidden rounded-2xl md:rounded-3xl shadow-xl border-2 md:border-4 border-white">
               {isPlaying ? (
-                <AspectRatio ratio={16 / 9}>
+                <div className="w-full aspect-video">
                   <iframe 
                     src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
                     title="Islamic education video" 
@@ -48,7 +48,7 @@ const Hero = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
-                </AspectRatio>
+                </div>
               ) : (
                 <AspectRatio ratio={16 / 9}>
                   <div 

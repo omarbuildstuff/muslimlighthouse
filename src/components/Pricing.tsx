@@ -26,7 +26,7 @@ const Pricing = () => {
   return (
     <section id="pricing" className="section-padding bg-lighthouse-50/50">
       <div className="container mx-auto px-4">
-        <div className="w-full max-w-3xl mx-auto">
+        <div className="w-full sm:max-w-3xl mx-auto">
           <div className="glass-card overflow-hidden">
             <div className="bg-gradient-to-r from-lighthouse-600 to-lighthouse-500 py-8 px-6 text-white text-center">
               <h3 className="text-3xl font-bold mb-2">Monthly Subscription</h3>
