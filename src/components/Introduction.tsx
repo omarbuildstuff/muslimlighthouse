@@ -46,8 +46,8 @@ const Introduction = () => {
                     className="absolute inset-0 flex items-center justify-center bg-navy-500/20 hover:bg-navy-500/10 transition-colors cursor-pointer group"
                     onClick={handlePlayClick}
                   >
-                    <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                      <Play size={24} className="fill-lighthouse-500 ml-1" />
+                    <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                      <Play size={30} className="fill-lighthouse-500 ml-1" />
                     </div>
                   </div>
                   <img 
