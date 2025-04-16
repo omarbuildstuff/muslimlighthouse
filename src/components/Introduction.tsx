@@ -48,7 +48,7 @@ const Introduction = () => {
                     </div>
                   </div>
                   <img 
-                    src="https://img.youtube.com/vi/RNMH13-lG0o/maxresdefault.jpg" 
+                    src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} 
                     alt="Program overview video" 
                     className="w-full h-full object-cover" 
                   />
