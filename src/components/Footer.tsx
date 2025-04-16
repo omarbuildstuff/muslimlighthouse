@@ -17,7 +17,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-navy-700 mt-8 pt-8 text-center">
+        <div className="text-center">
           <p className="text-white/50 text-sm">
             &copy; {new Date().getFullYear()} Muslim Lighthouse. All rights reserved.
           </p>
