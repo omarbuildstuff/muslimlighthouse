@@ -1,28 +1,20 @@
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-
 const ProgressCallout = () => {
-  const transformations = [
-    {
-      before: "Student lacked confidence in her Deen",
-      time: "9 months",
-      after: "Now feeling confident and helped someone convert"
-    },
-    {
-      before: "Student who had little to no connection to Allah ﷻ",
-      time: "2 months",
-      after: "Now crying for the first time in prayer"
-    },
-    {
-      before: "Students that had no pious friends",
-      time: "12 months",
-      after: "Now making best friends from ML community and meeting up multiple times in real life"
-    }
-  ];
-
-  return (
-    <section className="section-padding bg-navy-500 text-white">
+  const transformations = [{
+    before: "Student lacked confidence in her Deen",
+    time: "9 months",
+    after: "Now feeling confident and helped someone convert"
+  }, {
+    before: "Student who had little to no connection to Allah ﷻ",
+    time: "2 months",
+    after: "Now crying for the first time in prayer"
+  }, {
+    before: "Students that had no pious friends",
+    time: "12 months",
+    after: "Now making best friends from ML community and meeting up multiple times in real life"
+  }];
+  return <section className="section-padding bg-navy-500 text-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -38,9 +30,8 @@ const ProgressCallout = () => {
         
         <div className="max-w-4xl mx-auto">
           <div className="space-y-12">
-            {transformations.map((item, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur border-white/20 p-6 rounded-2xl">
-                <div className="flex flex-col md:flex-row gap-4 items-center">
+            {transformations.map((item, index) => <div key={index} className="bg-white/10 backdrop-blur border-white/20 p-6 rounded-2xl">
+                <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
                   <div className="md:w-1/3 text-center">
                     <p className="text-white/90 font-medium">{item.before}</p>
                   </div>
@@ -58,8 +49,7 @@ const ProgressCallout = () => {
                     <p className="text-white font-semibold">{item.after}</p>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
           
           <div className="mt-16 text-center">
@@ -73,8 +63,6 @@ const ProgressCallout = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ProgressCallout;
