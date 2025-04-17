@@ -21,7 +21,7 @@ const Pricing = () => {
     text: "Progress tracking"
   }];
   return <section id="pricing" className="section-padding bg-lighthouse-50/50">
-      <div className="container mx-auto px-4 max-w-sm">
+      <div className="container mx-auto px-4 md:max-w-xl">
         <div className="w-full sm:max-w-3xl mx-auto">
           <div className="glass-card overflow-hidden">
             <div className="bg-gradient-to-r from-lighthouse-600 to-lighthouse-500 py-8 px-6 text-white text-center">
