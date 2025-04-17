@@ -11,16 +11,14 @@ const Footer = () => {
           
           <div className="text-center md:text-left">
             <a href="mailto:info@muslimlighthouse.com" className="flex items-center gap-2 text-white/70 hover:text-white transition-colors">
-              <Mail size={18} className="text-lighthouse-400" />
+              
               <span>© 2025 Muslim Lighthouse. All rights reserved.</span>
             </a>
           </div>
         </div>
         
         <div className="text-center">
-          <p className="text-white/50 text-sm">
-            &copy; {new Date().getFullYear()} Muslim Lighthouse. All rights reserved.
-          </p>
+          
         </div>
       </div>
     </footer>;
