@@ -25,8 +25,8 @@ const Index = () => {
       <Navbar />
       <Hero />
       <LearningExperience />
-      <Introduction />
       <Books />
+      <Introduction />
       <Sciences />
       <Teachers />
       <Mauritania />
