@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Play } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+
 const Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoId = "p6_2s_357_Q";
@@ -20,7 +21,7 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 md:mb-16">
-              <a href="#join-now" className="cta-button animate-pulse-light px-6 py-3 md:px-8 md:py-4 text-sm md:text-base">
+              <a href="https://www.muslimlighthouse.app/checkout/premium-membership" className="cta-button animate-pulse-light px-6 py-3 md:px-8 md:py-4 text-sm md:text-base">
                 Join Now
               </a>
               
@@ -49,4 +50,5 @@ const Hero = () => {
       </div>
     </section>;
 };
+
 export default Hero;

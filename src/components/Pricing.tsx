@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check, BookOpen, Video, Users, MessageSquare, FileText } from 'lucide-react';
 
@@ -76,7 +75,7 @@ const Pricing = () => {
                 </ul>
               </div>
               
-              <a id="join-now" href="#" className="cta-button w-full flex justify-center text-lg">
+              <a id="join-now" href="https://www.muslimlighthouse.app/checkout/premium-membership" className="cta-button w-full flex justify-center text-lg">
                 Join Now
               </a>
               
