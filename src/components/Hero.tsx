@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Play } from 'lucide-react';
+import { Play, Users, Calendar, BookOpen } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const Hero = () => {
@@ -17,15 +17,30 @@ const Hero = () => {
               Transform your <span className="gradient-text">iman</span> through bite-sized lessons
             </h1>
             
-            <p className="text-navy-400 text-base sm:text-lg md:text-xl mb-6 md:mb-8 max-w-xl mx-auto">
+            <p className="text-navy-400 text-base sm:text-lg md:text-xl mb-6 md:mb-6 max-w-xl mx-auto">
               Join our community of dedicated students seeking authentic Islamic knowledge through traditional texts and scholarly guidance.
             </p>
             
-            <ul className="text-navy-500 text-base sm:text-lg md:text-xl mb-8 max-w-xl mx-auto space-y-3 text-left list-disc pl-5">
-              <li>Interact with your teacher and students in our supportive community</li>
-              <li>Engage in multiple weekly live classes to maximise your benefit</li>
-              <li>Learn from a variety of concise courses to level up your knowledge</li>
-            </ul>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mb-8 max-w-2xl mx-auto">
+              <div className="flex items-center gap-3 bg-lighthouse-50/70 p-3 rounded-lg text-left">
+                <div className="bg-lighthouse-100 p-2 rounded-full text-lighthouse-600 flex-shrink-0">
+                  <Users size={16} />
+                </div>
+                <p className="text-navy-600 text-sm md:text-base">Interact with teachers and students in our community</p>
+              </div>
+              <div className="flex items-center gap-3 bg-lighthouse-50/70 p-3 rounded-lg text-left">
+                <div className="bg-lighthouse-100 p-2 rounded-full text-lighthouse-600 flex-shrink-0">
+                  <Calendar size={16} />
+                </div>
+                <p className="text-navy-600 text-sm md:text-base">Multiple weekly live classes to maximize benefit</p>
+              </div>
+              <div className="flex items-center gap-3 bg-lighthouse-50/70 p-3 rounded-lg text-left">
+                <div className="bg-lighthouse-100 p-2 rounded-full text-lighthouse-600 flex-shrink-0">
+                  <BookOpen size={16} />
+                </div>
+                <p className="text-navy-600 text-sm md:text-base">Learn from concise courses to level up knowledge</p>
+              </div>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 md:mb-16">
               <a href="https://www.muslimlighthouse.app/checkout/premium-membership" className="cta-button animate-pulse-light px-6 py-3 md:px-8 md:py-4 text-sm md:text-base">
