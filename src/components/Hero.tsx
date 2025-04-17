@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Play } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
@@ -19,6 +20,12 @@ const Hero = () => {
             <p className="text-navy-400 text-base sm:text-lg md:text-xl mb-6 md:mb-8 max-w-xl mx-auto">
               Join our community of dedicated students seeking authentic Islamic knowledge through traditional texts and scholarly guidance.
             </p>
+            
+            <ul className="text-navy-500 text-base sm:text-lg md:text-xl mb-8 max-w-xl mx-auto space-y-3 text-left list-disc pl-5">
+              <li>Interact with your teacher and students in our supportive community</li>
+              <li>Engage in multiple weekly live classes to maximise your benefit</li>
+              <li>Learn from a variety of concise courses to level up your knowledge</li>
+            </ul>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 md:mb-16">
               <a href="https://www.muslimlighthouse.app/checkout/premium-membership" className="cta-button animate-pulse-light px-6 py-3 md:px-8 md:py-4 text-sm md:text-base">
