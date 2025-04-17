@@ -19,7 +19,7 @@ const Hero = () => {
               Join our community of dedicated students seeking authentic Islamic knowledge through traditional texts and scholarly guidance.
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mb-8  mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mb-8  mx-auto max-w-md">
               <div className="flex items-center gap-3 bg-lighthouse-50/70 p-3 rounded-lg text-left">
                 <div className="bg-lighthouse-100 p-2 rounded-full text-lighthouse-600 flex-shrink-0">
                   <Users size={16} />
