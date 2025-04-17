@@ -1,25 +1,28 @@
 import React from 'react';
-import { Check, BookOpen, Video, Users, MessageSquare, FileText } from 'lucide-react';
+import { Check, BookOpen, Video, Users, MessageSquare, FileText, Calendar } from 'lucide-react';
 const Pricing = () => {
-  const features = [{
-    icon: BookOpen,
-    text: "Access to all 9 Islamic sciences"
-  }, {
-    icon: Video,
-    text: "Daily bite-sized video lessons"
-  }, {
-    icon: Users,
-    text: "Live weekly Q&A sessions"
-  }, {
-    icon: MessageSquare,
-    text: "Private community forum"
-  }, {
-    icon: FileText,
-    text: "Downloadable study materials"
-  }, {
-    icon: Check,
-    text: "Progress tracking"
-  }];
+  const features = [
+    {
+      icon: FileText,
+      text: "Scholarly syllabus course (with recordings)"
+    },
+    {
+      icon: Video,
+      text: "Live interactive weekly lessons"
+    },
+    {
+      icon: Users,
+      text: "Private Community of 200+ Students"
+    },
+    {
+      icon: MessageSquare,
+      text: "Access to Rhyad and qualified teachers"
+    },
+    {
+      icon: Calendar,
+      text: "Yearly in-person meetups"
+    }
+  ];
   return <section id="pricing" className="section-padding bg-lighthouse-50/50">
       <div className="container mx-auto px-4 md:max-w-xl">
         <div className="w-full sm:max-w-3xl mx-auto">
@@ -49,23 +52,23 @@ const Pricing = () => {
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3">
                     <Check size={18} className="text-lighthouse-500" />
-                    <span className="text-navy-600">Access to our complete curriculum of 9 Islamic sciences</span>
+                    <span className="text-navy-600">Full scholarly syllabus course with recordings of all past live lessons</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <Check size={18} className="text-lighthouse-500" />
-                    <span className="text-navy-600">Daily bite-sized video lessons (5-15 minutes each)</span>
+                    <span className="text-navy-600">Live interactive weekly lessons to ask questions and discuss</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <Check size={18} className="text-lighthouse-500" />
-                    <span className="text-navy-600">Weekly live Q&A sessions with teachers</span>
+                    <span className="text-navy-600">Private Community of 200+ Students</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <Check size={18} className="text-lighthouse-500" />
-                    <span className="text-navy-600">Access to private community forum</span>
+                    <span className="text-navy-600">Access to Rhyad and qualified teachers</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <Check size={18} className="text-lighthouse-500" />
-                    <span className="text-navy-600">Downloadable study materials and notes</span>
+                    <span className="text-navy-600">Yearly in-person meetups and events</span>
                   </li>
                 </ul>
               </div>

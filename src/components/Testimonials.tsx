@@ -49,13 +49,13 @@ const Testimonials = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Member <span className="text-lighthouse-300">Testimonials</span>
+            What Our <span className="text-lighthouse-300">Students</span> Say
           </h2>
           
           <div className="h-1 w-16 bg-gradient-to-r from-lighthouse-400 to-lighthouse-300 rounded-full mx-auto my-8"></div>
           
           <p className="text-white/80 max-w-3xl mx-auto text-lg">
-            Hear from our community members about their experience with Muslim Lighthouse.
+            Hear from our students about their experience with Muslim Lighthouse.
           </p>
         </div>
         

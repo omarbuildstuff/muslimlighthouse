@@ -3,10 +3,10 @@ import React from 'react';
 import { Briefcase, GraduationCap, Globe } from 'lucide-react';
 const Teachers = () => {
   const teachers = [{
-    name: "Ustadh Ehsan",
+    name: "Ustadh Rhyad",
     role: "Primary Instructor",
-    bio: "Ustadh Ehsan has studied under scholars in Mauritania, Egypt and Jordan. He specializes in Aqeedah and Tafsir, with ijazahs in multiple classical texts. His teaching style combines deep knowledge with clarity and accessibility.",
-    image: "https://images.unsplash.com/photo-1600486913747-55e5323a6f40?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    bio: "Ustadh Rhyad is an Islamic teacher, Da’ee and student of knowledge that has studied all the Islamic sciences under Shaykh Baha al-Majlisi. Ever since experiencing such a deep and positive impact from the knowledge he has gained, he has since created Muslim Lighthouse to bring the ‘Mauritanian experience’ into the comfort of your own homes.Teaching and helping others is Ustadh Rhyad’s passion and you’ll be able to see that as you begin your studies inside of Muslim Lighthouse.",
+    image: "../lovable-uploads/rhyad.jpg",
     credentials: [{
       icon: GraduationCap,
       text: "Ijazah in multiple classical texts"
@@ -20,8 +20,8 @@ const Teachers = () => {
   }, {
     name: "Shaykh Baha Al-Majlisi",
     role: "Senior Scholar",
-    bio: "Shaykh Baha Al-Majlisi is a distinguished scholar with over 20 years of teaching experience. He received traditional ijazahs from the scholars of Mauritania and has authored several works on Islamic jurisprudence and theology.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    bio: "Shaykh Baha Al-Majlisi is a Mauritanian scholar and is the teacher of Ustadh Rhyad. He started studying Islam at a very young age. He memorised the Quran at 7 and had memorised books from the sciences before reaching the age of maturity. He became a scholar at the age of 20 and has been building other scholars for more than 20 years ever since. Shaykh Baha is Muslim Lighthouse’s backbone. He is in charge of the syllabus, provides approval for the content being taught and helps with the more complex questions so that the students in Muslim Lighthouse have clarity and confidence in their personal lives too.",
+    image: "../lovable-uploads/shaykh.jpg",
     credentials: [{
       icon: GraduationCap,
       text: "Traditional ijazahs from senior scholars"
@@ -41,16 +41,17 @@ const Teachers = () => {
           </h2>
           
           <div className="divider"></div>
-          
-          <p className="text-navy-400 max-w-3xl mx-auto text-lg">
-            Learn from qualified scholars who have been trained in the traditional Islamic educational system and hold ijazahs (certifications) in the texts they teach.
-          </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto items-start">
           {teachers.map(teacher => <div key={teacher.name} className="glass-card overflow-hidden group">
-              <div className="h-64 overflow-hidden">
-                <img src={teacher.image} alt={teacher.name} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+              <div className="w-full overflow-hidden rounded-xl bg-white">
+                <img
+                  src={teacher.image}
+                  alt={teacher.name}
+                  className="w-full object-cover rounded-xl shadow-lg border-2 border-white"
+                  style={{ display: 'block', maxHeight: '350px', width: '100%', height: 'auto', objectFit: 'cover' }}
+                />
               </div>
               
               <div className="p-6 md:p-8">
@@ -60,15 +61,7 @@ const Teachers = () => {
                 </div>
                 
                 <p className="text-navy-400 mb-6">{teacher.bio}</p>
-                
-                <div className="space-y-3">
-                  {teacher.credentials.map((credential, index) => <div key={index} className="flex items-center gap-3">
-                      <div className="text-lighthouse-500">
-                        <credential.icon size={18} />
-                      </div>
-                      <span className="text-navy-500">{credential.text}</span>
-                    </div>)}
-                </div>
+              
               </div>
             </div>)}
         </div>

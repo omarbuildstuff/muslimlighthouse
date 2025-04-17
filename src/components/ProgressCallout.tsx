@@ -31,7 +31,7 @@ const ProgressCallout = () => {
         <div className="max-w-4xl mx-auto">
           <div className="space-y-12">
             {transformations.map((item, index) => <div key={index} className="bg-white/10 backdrop-blur border-white/20 p-6 rounded-2xl ">
-                <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
+                <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
                   <div className="md:w-1/3 text-center">
                     <p className="text-white/90 font-medium">{item.before}</p>
                   </div>
@@ -52,13 +52,9 @@ const ProgressCallout = () => {
               </div>)}
           </div>
           
-          <div className="mt-16 text-center">
-            <p className="text-xl text-white/90 mb-8">
-              Don't let another day pass without making progress in your Islamic knowledge.
-            </p>
-            
-            <a href="#join-now" className="cta-button">
-              Start Your Journey Today
+          <div className="mt-16 text-center">            
+            <a href="https://www.muslimlighthouse.app/checkout/premium-membership" className="cta-button">
+              I want to make progress too!
             </a>
           </div>
         </div>

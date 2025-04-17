@@ -22,7 +22,9 @@ const Introduction = () => {
           <div className="divider"></div>
           
           <p className="text-navy-400 max-w-3xl mx-auto text-lg">
-            Muslim Lighthouse offers a structured path to learning traditional Islamic sciences through the methodology of Mauritanian scholars, known for their preservation of knowledge across generations.
+          Each science mentioned has a ‘ladder’ of scholarly texts that start off beginner and become more advanced until you master the science.
+‍<br></br><br></br>Ustadh Rhyad teaches a mixture of beginner texts and advanced texts in a way that anyone can understand to help you not just have a deep understanding yourself, but also be able to transfer this understanding to your friends, families and communities.
+<br></br>‍<br></br>Each text is translated and taught in English, and delivered in small bite-sized lessons so that you can absorb the knowledge and deepen your understanding despite having busy schedules.
           </p>
         </div>
         

@@ -12,11 +12,11 @@ const Hero = () => {
         <div className="flex flex-col items-center text-center">
           <div className="w-full max-w-4xl mt-5">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
-              Transform your <span className="gradient-text">iman</span> through bite-sized lessons
+            Teaching you Islam <span className="gradient-text">from teacher to student</span>,<br></br>not just pre-recorded videos
             </h1>
             
             <p className="text-navy-400 text-base sm:text-lg md:text-xl mb-6 md:mb-6 max-w-xl mx-auto">
-              Join our community of dedicated students seeking authentic Islamic knowledge through traditional texts and scholarly guidance.
+            Filling your heart with the light of Islam, and transforming you into a beacon of light for those around you too.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-3 md:gap-4 mb-8  mx-auto max-w-full">

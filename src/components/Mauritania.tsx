@@ -14,7 +14,7 @@ const Mauritania = () => {
     title: "Student-Teacher Relationship",
     description: "The Mauritanian model emphasizes close relationships between teachers and students, with individual attention and personalized guidance."
   }];
-  return <section className="section-padding bg-gradient-to-b from-white to-lighthouse-50/50">
+  return <section className="section-padding bg-gradient-to-b from-white to-lighthouse-50/50 pt-8">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -22,10 +22,6 @@ const Mauritania = () => {
           </h2>
           
           <div className="divider"></div>
-          
-          <p className="text-navy-400 max-w-3xl mx-auto text-lg">
-            The Mauritanian tradition of Islamic scholarship is renowned for its preservation of knowledge and unique educational methodology.
-          </p>
         </div>
         
         <div className="flex flex-col lg:flex-row gap-12 items-center max-w-5xl mx-auto">
@@ -40,7 +36,8 @@ const Mauritania = () => {
           
           <div className="lg:w-1/2">
             <p className="text-navy-500 text-lg mb-8">
-              For centuries, Mauritania has been a center of Islamic scholarship, with students traveling from across the world to study with its renowned scholars. The teaching methods developed there have proven effective in producing scholars with deep understanding and strong foundations.
+            Mauritania is renowned for its high level of Islamic scholarship. It has a unique system of ‘Mahdaras’ which are traditional Islamic schools that have produced scholars with unparalleled memorization and understanding, making it a hub for seekers of authentic Islamic knowledge.
+            <br></br><br></br>Studying in Mauritania is difficult due to its harsh environment. Muslim Lighthouse is the first institution to bring this unique style of teaching in ‘Mahdaras’ into the comfort of your own home.
             </p>
             
             

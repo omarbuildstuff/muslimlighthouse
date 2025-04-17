@@ -1,11 +1,16 @@
 import React from 'react';
 const LearningExperience = () => {
-  return <section className="section-padding bg-white">
+  return <section className="section-padding bg-white pt-4">
       <div className="container mx-auto">
         
         
-        <div className="mx-auto max-w-5xl">
-          <img src="/lovable-uploads/59ddb171-afc4-4c29-8557-1516480ba7fa.png" alt="Muslim Lighthouse Learning Experience" className="w-full h-auto rounded-xl shadow-xl border-2 border-white" />
+        <div className="mx-auto max-w-5xl flex justify-center items-center">
+          <img
+            src="../lovable-uploads/overview.png"
+            alt="Muslim Lighthouse Learning Experience"
+            className="block w-auto max-w-full h-auto rounded-xl shadow-xl border-2 border-white"
+            style={{ maxHeight: '90vh', objectFit: 'contain' }}
+          />
         </div>
       </div>
     </section>;
