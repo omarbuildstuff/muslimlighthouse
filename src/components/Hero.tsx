@@ -1,15 +1,13 @@
-
 import React, { useState } from 'react';
 import { Play, Users, Calendar, BookOpen } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-
 const Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoId = "p6_2s_357_Q";
   const handlePlayClick = () => {
     setIsPlaying(true);
   };
-  return <section className="pt-16 pb-5 md:pt-24 md:pb-20 lg:pt-32 lg:pb-32 px-4 md:px-6 bg-gradient-to-b from-lighthouse-50/50 to-white min-h-screen flex items-center">
+  return <section className="pt-12 pb-5 md:pt-16 md:pb-20 lg:pt-24 lg:pb-32 px-4 md:px-6 bg-gradient-to-b from-lighthouse-50/50 to-white min-h-screen flex items-center">
       <div className="container mx-auto mt-10">
         <div className="flex flex-col items-center text-center">
           <div className="w-full max-w-4xl mt-5">
@@ -21,7 +19,7 @@ const Hero = () => {
               Join our community of dedicated students seeking authentic Islamic knowledge through traditional texts and scholarly guidance.
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mb-8 max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mb-8  mx-auto">
               <div className="flex items-center gap-3 bg-lighthouse-50/70 p-3 rounded-lg text-left">
                 <div className="bg-lighthouse-100 p-2 rounded-full text-lighthouse-600 flex-shrink-0">
                   <Users size={16} />
@@ -72,5 +70,4 @@ const Hero = () => {
       </div>
     </section>;
 };
-
 export default Hero;
