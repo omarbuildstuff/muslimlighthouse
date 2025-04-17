@@ -1,6 +1,5 @@
 import React from 'react';
 import { Check, BookOpen, Video, Users, MessageSquare, FileText } from 'lucide-react';
-
 const Pricing = () => {
   const features = [{
     icon: BookOpen,
@@ -21,10 +20,8 @@ const Pricing = () => {
     icon: Check,
     text: "Progress tracking"
   }];
-  
-  return (
-    <section id="pricing" className="section-padding bg-lighthouse-50/50">
-      <div className="container mx-auto px-4">
+  return <section id="pricing" className="section-padding bg-lighthouse-50/50">
+      <div className="container mx-auto px-4 max-w-sm">
         <div className="w-full sm:max-w-3xl mx-auto">
           <div className="glass-card overflow-hidden">
             <div className="bg-gradient-to-r from-lighthouse-600 to-lighthouse-500 py-8 px-6 text-white text-center">
@@ -39,14 +36,12 @@ const Pricing = () => {
             
             <div className="p-6 md:p-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                {features.map(feature => (
-                  <div key={feature.text} className="flex items-center gap-4">
+                {features.map(feature => <div key={feature.text} className="flex items-center gap-4">
                     <div className="bg-lighthouse-100 p-2 rounded-full text-lighthouse-600">
                       <feature.icon size={18} />
                     </div>
                     <span className="text-navy-600">{feature.text}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
               
               <div className="bg-navy-50 rounded-xl p-6 mb-8">
@@ -86,8 +81,6 @@ const Pricing = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Pricing;
