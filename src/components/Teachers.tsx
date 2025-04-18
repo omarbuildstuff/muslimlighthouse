@@ -60,7 +60,7 @@ const Teachers = () => {
                   
                 </div>
                 
-                <p className="text-navy-400 mb-6">{teacher.bio}</p>
+                <p className="text-navy-400">{teacher.bio}</p>
               
               </div>
             </div>)}

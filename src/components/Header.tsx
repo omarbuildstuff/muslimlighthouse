@@ -37,9 +37,9 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#program" className="text-navy-500 hover:text-lighthouse-500 transition-colors">Program</a>
+          {/*<a href="#program" className="text-navy-500 hover:text-lighthouse-500 transition-colors">Program</a>
           <a href="#sciences" className="text-navy-500 hover:text-lighthouse-500 transition-colors">Sciences</a>
-          <a href="#teachers" className="text-navy-500 hover:text-lighthouse-500 transition-colors">Teachers</a>
+          <a href="#teachers" className="text-navy-500 hover:text-lighthouse-500 transition-colors">Teachers</a>*/}
           <a href="#testimonials" className="text-navy-500 hover:text-lighthouse-500 transition-colors">Testimonials</a>
           <a href="#pricing" className="text-navy-500 hover:text-lighthouse-500 transition-colors">Pricing</a>
           <a href="#join-now" className="cta-button py-2 px-6">Join Now</a>
@@ -58,7 +58,7 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white py-4 shadow-lg animate-fade-in">
           <nav className="container mx-auto flex flex-col items-center gap-4">
-            <a 
+            {/*<a 
               href="#program" 
               className="text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -78,7 +78,7 @@ const Header = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Teachers
-            </a>
+            </a>*/}
             <a 
               href="#testimonials" 
               className="text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center"

@@ -12,7 +12,7 @@ const Hero = () => {
         <div className="flex flex-col items-center text-center">
           <div className="w-full max-w-4xl mt-5">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
-            Teaching you Islam <span className="gradient-text">from teacher to student</span>,<br></br>not just pre-recorded videos
+            Teaching you Islam <br></br>from <span className="gradient-text">teacher</span> to <span className="gradient-text">student</span>,<br></br>not just pre-recorded videos
             </h1>
             
             <p className="text-navy-400 text-base sm:text-lg md:text-xl mb-6 md:mb-6 max-w-xl mx-auto">
