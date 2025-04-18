@@ -20,9 +20,9 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-6">
-          <a href="#program" className="text-navy-500 hover:text-lighthouse-500 transition-colors font-medium">Program</a>
+          {/*<a href="#program" className="text-navy-500 hover:text-lighthouse-500 transition-colors font-medium">Program</a>
           <a href="#sciences" className="text-navy-500 hover:text-lighthouse-500 transition-colors font-medium">Sciences</a>
-          <a href="#teachers" className="text-navy-500 hover:text-lighthouse-500 transition-colors font-medium">Teachers</a>
+          <a href="#teachers" className="text-navy-500 hover:text-lighthouse-500 transition-colors font-medium">Teachers</a>*/}
           <a href="#testimonials" className="text-navy-500 hover:text-lighthouse-500 transition-colors font-medium">Testimonials</a>
           <a href="#pricing" className="text-navy-500 hover:text-lighthouse-500 transition-colors font-medium">Pricing</a>
           <a href="https://www.muslimlighthouse.app/checkout/premium-membership" className="cta-button ml-4 px-6 py-2">Join Now</a>
