@@ -65,6 +65,15 @@ const FreeLesson = () => {
                   </AspectRatio>}
               </div>
             </div>
+            {/* CTAs below free lessons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+              <a href="https://www.muslimlighthouse.app/checkout/premium-membership" className="cta-button animate-pulse-light px-6 py-3 md:px-8 md:py-4 text-sm md:text-base">
+                Join Now
+              </a>
+              <a href="#pricing" className="secondary-button flex items-center gap-2 justify-center px-5 py-2.5 md:px-6 md:py-3 text-sm md:text-base">
+                Learn More
+              </a>
+            </div>
           </div>
         </div>
       </div>
