@@ -110,7 +110,7 @@ const Testimonials = () => {
         </div>
         
         <div className="relative max-w-4xl mx-auto trustpilot-block bg-white p-6 rounded-2xl" style={{ boxShadow: '0 4px 5px 0 rgba(0, 192, 230, 0.2)' }}>
-          <div id="shapo-widget-3fe790e6da7cc3303d2f"></div>
+          <div id="shapo-widget-cdbc4aa31f0577fc383b"></div>
         </div>
       </div>
     </section>

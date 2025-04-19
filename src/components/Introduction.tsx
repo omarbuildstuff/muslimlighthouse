@@ -50,11 +50,19 @@ const Introduction = () => {
                   >
                     <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
                       <svg width="0" height="0">
-  <filter id="play-shadow" x="-50%" y="-50%" width="200%" height="200%">
-    <feDropShadow dx="6" dy="8" stdDeviation="4" flood-color="black" flood-opacity="0.7" />
+  {/* Reduced shadow offset and blur for better mobile appearance */}
+  <filter id="play-shadow" x="-25%" y="-25%" width="150%" height="150%">
+    <feDropShadow dx="1.5" dy="1.5" stdDeviation="1" flood-color="black" flood-opacity="0.4" />
   </filter>
 </svg>
-<Play size={30} className="fill-lighthouse-500 ml-1" stroke="none" filter="url(#play-shadow)" />
+<div className="w-20 h-20 rounded-full bg-white flex items-center justify-center overflow-hidden drop-shadow-md md:drop-shadow-xl group-hover:scale-105 transition-transform">
+  <Play
+    size={30}
+    className="fill-lighthouse-500 ml-1"
+    stroke="none"
+    style={{ filter: 'url(#play-shadow)' }}
+  />
+</div>
                     </div>
                   </div>
                   <img 
