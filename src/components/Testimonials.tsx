@@ -32,6 +32,14 @@ const Testimonials = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Auto-scroll every 4 seconds
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
+
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => 
       (prevIndex + 1) % testimonials.length
