@@ -16,7 +16,7 @@ const Pricing = () => {
     },
     {
       icon: MessageSquare,
-      text: "Access to Rhyad and qualified teachers"
+      text: "Access to Ustadh Rhyad"
     },
     {
       icon: Calendar,
@@ -28,7 +28,7 @@ const Pricing = () => {
         <div className="w-full sm:max-w-3xl mx-auto">
           <div className="glass-card overflow-hidden">
             <div className="bg-gradient-to-r from-lighthouse-600 to-lighthouse-500 py-8 px-6 text-white text-center">
-              <h3 className="text-3xl font-bold mb-2">Monthly Subscription</h3>
+              <h3 className="text-3xl font-bold mb-2">Premium Subscription</h3>
               <p className="opacity-90 mb-4">Unlock your path to authentic knowledge</p>
               
               <div className="flex justify-center items-baseline">
@@ -64,7 +64,7 @@ const Pricing = () => {
                   </li>
                   <li className="flex items-center gap-3">
                     <Check size={18} className="text-lighthouse-500" />
-                    <span className="text-navy-600">Access to Rhyad and qualified teachers</span>
+                    <span className="text-navy-600">Access to Ustadh Rhyad</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <Check size={18} className="text-lighthouse-500" />

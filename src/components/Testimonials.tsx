@@ -60,59 +60,10 @@ const Testimonials = () => {
         </div>
         
         <div className="relative max-w-4xl mx-auto">
-          <div className="glass-card bg-white/10 backdrop-blur border-white/20 p-8 md:p-12 rounded-3xl">
-            <div className="text-lighthouse-300 mb-6">
-              <Quote size={48} />
-            </div>
-            
-            <p className="text-xl md:text-2xl mb-8 text-white/90 italic">
-              "{testimonials[currentIndex].quote}"
-            </p>
-            
-            <div className="flex items-center gap-4">
-              <img 
-                src={testimonials[currentIndex].image} 
-                alt={testimonials[currentIndex].name} 
-                className="w-14 h-14 rounded-full object-cover"
-              />
-              
-              <div>
-                <h4 className="font-bold text-white">{testimonials[currentIndex].name}</h4>
-                <p className="text-lighthouse-300">{testimonials[currentIndex].title}</p>
-              </div>
-            </div>
-          </div>
+
+
           
-          <div className="flex justify-center gap-4 mt-8">
-            <button 
-              onClick={prevSlide}
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white"
-              aria-label="Previous testimonial"
-            >
-              <ChevronLeft size={24} />
-            </button>
-            
-            <button 
-              onClick={nextSlide}
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white"
-              aria-label="Next testimonial"
-            >
-              <ChevronRight size={24} />
-            </button>
-          </div>
-          
-          <div className="flex justify-center gap-2 mt-6">
-            {testimonials.map((_, index) => (
-              <button 
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all ${
-                  index === currentIndex ? 'bg-lighthouse-400 w-6' : 'bg-white/30'
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
-            ))}
-          </div>
+        <script src="https://app.reviewgrower.com/js/v1/embed.js?token=8568ebcf-55e8-4d46-b3d9-a2dd1d4ccfb5" type="text/javascript"></script>
         </div>
       </div>
     </section>
