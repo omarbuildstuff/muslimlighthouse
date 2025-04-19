@@ -1,8 +1,18 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const Testimonials = () => {
+  useEffect(() => {
+    // Only add script if it doesn't exist
+    if (!document.getElementById('shapo-embed-js')) {
+      const script = document.createElement('script');
+      script.id = 'shapo-embed-js';
+      script.src = 'https://cdn.shapo.io/js/embed.js';
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  }, []);
   const testimonials = [
   {
     quote: `السلام عليكم ورحمة الله وبركاته\n\nI initially joined after some significant life changes, hoping to find solace in learning about Islam and bettering myself to draw closer to Allah ﷻ. Alhamdulillah, through these classes, I have gained so much beneficial knowledge and found a profound sense of peace that's helped me navigate life with greater clarity and purpose.\n\nI’ve also gained a supportive and motivating community of like-minded individuals on this same journey. Being part of this community has been incredible, their diverse perspectives during class discussions and assignments have deepened my understanding, which helps in improving implementation and retention of what I’ve learned, Alhamdulillah.\n\nFor anyone considering joining, this is a space where questions and concerns are met with understanding and encouragement, the instructor and community members create a comfortable environment for asking for advice and clarifications, making it easier to address personal struggles and challenges through the lens of Islam. I highly recommend it to anyone looking for both spiritual growth and meaningful connections.`,
@@ -105,7 +115,6 @@ const Testimonials = () => {
         
         <div className="relative max-w-4xl mx-auto">
         <div id="shapo-widget-3fe790e6da7cc3303d2f"></div>
-        <script id="shapo-embed-js" type="text/javascript" src="https://cdn.shapo.io/js/embed.js" defer></script>
         </div>
       </div>
     </section>
