@@ -17,7 +17,13 @@ const FreeLesson = () => {
   };
 
   return (
-    <section id="free-lesson" className="section-padding bg-white">
+    <>
+      <svg width="0" height="0">
+        <filter id="play-shadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feDropShadow dx="6" dy="8" stdDeviation="4" flood-color="black" flood-opacity="0.7" />
+        </filter>
+      </svg>
+      <section id="free-lesson" className="section-padding bg-white">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col gap-12 items-center">
@@ -42,7 +48,7 @@ const FreeLesson = () => {
                   </div> : <AspectRatio ratio={16 / 9}>
                     <div className="absolute inset-0 flex items-center justify-center bg-navy-500/20 hover:bg-navy-500/10 transition-colors cursor-pointer group" onClick={handlePlayClick}>
                       <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                        <Play size={30} className="fill-lighthouse-500 drop-shadow-2xl ml-1" stroke="none" />
+                        <Play size={30} className="fill-lighthouse-500 ml-1" stroke="none" filter="url(#play-shadow)" />
                       </div>
                     </div>
                     <img src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} alt="Free lesson preview" className="w-full h-full object-cover" />
@@ -58,7 +64,7 @@ const FreeLesson = () => {
                   </div> : <AspectRatio ratio={16 / 9}>
                     <div className="absolute inset-0 flex items-center justify-center bg-navy-500/20 hover:bg-navy-500/10 transition-colors cursor-pointer group" onClick={() => setIsPlaying2(true)}>
                       <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                        <Play size={30} className="fill-lighthouse-500 drop-shadow-2xl ml-1" stroke="none" />
+                        <Play size={30} className="fill-lighthouse-500 ml-1" stroke="none" filter="url(#play-shadow)" />
                       </div>
                     </div>
                     <img src={`https://img.youtube.com/vi/${videoId2}/maxresdefault.jpg`} alt="Free lesson preview 2" className="w-full h-full object-cover" />
@@ -86,6 +92,7 @@ const FreeLesson = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 export default FreeLesson;

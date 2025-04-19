@@ -107,14 +107,10 @@ const Testimonials = () => {
           </h2>
           
           <div className="h-1 w-16 bg-gradient-to-r from-lighthouse-400 to-lighthouse-300 rounded-full mx-auto my-8"></div>
-          
-          <p className="text-white/80 max-w-3xl mx-auto text-lg">
-            Hear from our students about their experience with Muslim Lighthouse.
-          </p>
         </div>
         
-        <div className="relative max-w-4xl mx-auto">
-        <div id="shapo-widget-3fe790e6da7cc3303d2f"></div>
+        <div className="relative max-w-4xl mx-auto trustpilot-block bg-white p-6 rounded-2xl" style={{ boxShadow: '0 4px 5px 0 rgba(0, 192, 230, 0.2)' }}>
+          <div id="shapo-widget-3fe790e6da7cc3303d2f"></div>
         </div>
       </div>
     </section>

@@ -7,7 +7,13 @@ const Hero = () => {
   const handlePlayClick = () => {
     setIsPlaying(true);
   };
-  return <section className="pt-12 pb-5 md:pt-16 md:pb-20 lg:pt-24 lg:pb-32 px-4 md:px-6 bg-gradient-to-b from-lighthouse-50/50 to-white min-h-screen flex items-center">
+  return <>
+  <svg width="0" height="0">
+    <filter id="play-shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="3" dy="3" stdDeviation="2" flood-color="black" flood-opacity="0.5" />
+    </filter>
+  </svg>
+  <section className="pt-12 pb-5 md:pt-16 md:pb-20 lg:pt-24 lg:pb-32 px-4 md:px-6 bg-gradient-to-b from-lighthouse-50/50 to-white min-h-screen flex items-center">
       <div className="container mx-auto mt-10">
         <div className="flex flex-col items-center text-center">
           <div className="w-full max-w-4xl mt-5">
@@ -59,7 +65,7 @@ const Hero = () => {
                 </div> : <AspectRatio ratio={16 / 9}>
                   <div className="absolute inset-0 flex items-center justify-center bg-navy-500/20 hover:bg-navy-500/10 transition-colors cursor-pointer group" onClick={handlePlayClick}>
                     <div className="w-14 h-14 md:w-20 md:h-20 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                      <Play size={20} className="fill-lighthouse-500 drop-shadow-2xl ml-1 md:w-[30px] md:h-[30px]" stroke="none" />
+                      <Play size={20} className="fill-lighthouse-500 ml-1 md:w-[30px] md:h-[30px]" stroke="none" filter="url(#play-shadow)" />
                     </div>
                   </div>
                   <img src="https://img.youtube.com/vi/p6_2s_357_Q/maxresdefault.jpg" alt="Islamic education video preview" className="w-full h-full object-cover" />
@@ -68,6 +74,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+</>;
 };
 export default Hero;

@@ -49,7 +49,12 @@ const Introduction = () => {
                     onClick={handlePlayClick}
                   >
                     <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                      <Play size={30} className="fill-lighthouse-500 drop-shadow-2xl ml-1" stroke="none" />
+                      <svg width="0" height="0">
+  <filter id="play-shadow" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="6" dy="8" stdDeviation="4" flood-color="black" flood-opacity="0.7" />
+  </filter>
+</svg>
+<Play size={30} className="fill-lighthouse-500 ml-1" stroke="none" filter="url(#play-shadow)" />
                     </div>
                   </div>
                   <img 
