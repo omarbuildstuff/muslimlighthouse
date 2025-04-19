@@ -8,7 +8,7 @@ const LearningExperience = () => {
           <img
             src="../lovable-uploads/overview.png"
             alt="Muslim Lighthouse Learning Experience"
-            className="block w-auto max-w-full h-auto rounded-xl shadow-xl border-2 border-white"
+            className="block w-auto max-w-full h-auto rounded-xl shadow-2xl border-2 border-white"
             style={{ maxHeight: '90vh', objectFit: 'contain' }}
           />
         </div>
