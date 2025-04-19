@@ -34,7 +34,7 @@ const FreeLesson = () => {
             <div className="lg:w-3/4 max-w-3xl w-full space-y-8">
               {/* First Video */}
               <div className="glass-card bg-navy-50/80 rounded-xl shadow px-4 py-3 mb-2 text-lg font-bold text-lighthouse-500 text-center tracking-tight">
-                Fiqh of Fasting <span className="text-navy-600 font-semibold">— Free Lesson</span>
+                Fiqh of Fasting <span className="text-navy-600 font-semibold">— Conditions of a Valid Fast</span>
               </div>
               <div className="video-container relative overflow-hidden rounded-3xl shadow-xl border-4 border-white">
                 {isPlaying ? <div className="w-full aspect-video">
@@ -42,7 +42,7 @@ const FreeLesson = () => {
                   </div> : <AspectRatio ratio={16 / 9}>
                     <div className="absolute inset-0 flex items-center justify-center bg-navy-500/20 hover:bg-navy-500/10 transition-colors cursor-pointer group" onClick={handlePlayClick}>
                       <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                        <Play size={30} className="fill-lighthouse-500 ml-1" />
+                        <Play size={30} className="fill-lighthouse-500 drop-shadow-2xl ml-1" stroke="none" />
                       </div>
                     </div>
                     <img src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} alt="Free lesson preview" className="w-full h-full object-cover" />
@@ -50,7 +50,7 @@ const FreeLesson = () => {
               </div>
               {/* Second Video */}
               <div className="glass-card bg-navy-50/80 rounded-xl shadow px-4 py-3 mb-2 text-lg font-bold text-lighthouse-500 text-center tracking-tight">
-                Sound Heart <span className="text-navy-600 font-semibold">— Free Lesson</span>
+                Sound Heart <span className="text-navy-600 font-semibold">— Is Your Heart Dirty?</span>
               </div>
               <div className="video-container relative overflow-hidden rounded-3xl shadow-xl border-4 border-white">
                 {isPlaying2 ? <div className="w-full aspect-video">
@@ -58,7 +58,7 @@ const FreeLesson = () => {
                   </div> : <AspectRatio ratio={16 / 9}>
                     <div className="absolute inset-0 flex items-center justify-center bg-navy-500/20 hover:bg-navy-500/10 transition-colors cursor-pointer group" onClick={() => setIsPlaying2(true)}>
                       <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                        <Play size={30} className="fill-lighthouse-500 ml-1" />
+                        <Play size={30} className="fill-lighthouse-500 drop-shadow-2xl ml-1" stroke="none" />
                       </div>
                     </div>
                     <img src={`https://img.youtube.com/vi/${videoId2}/maxresdefault.jpg`} alt="Free lesson preview 2" className="w-full h-full object-cover" />
@@ -66,11 +66,19 @@ const FreeLesson = () => {
               </div>
             </div>
             {/* CTAs below free lessons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <a href="https://www.muslimlighthouse.app/checkout/premium-membership" className="cta-button animate-pulse-light px-6 py-3 md:px-8 md:py-4 text-sm md:text-base">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 w-full">
+              <a
+                href="https://www.muslimlighthouse.app/checkout/premium-membership"
+                className="cta-button animate-pulse-light w-full sm:w-auto text-base font-semibold px-8 py-4 md:px-10 md:py-5"
+                style={{ minHeight: 56 }}
+              >
                 Join Now
               </a>
-              <a href="#pricing" className="secondary-button flex items-center gap-2 justify-center px-5 py-2.5 md:px-6 md:py-3 text-sm md:text-base">
+              <a
+                href="#pricing"
+                className="secondary-button w-full sm:w-auto flex items-center gap-2 justify-center text-base font-semibold px-8 py-4 md:px-10 md:py-5"
+                style={{ minHeight: 56 }}
+              >
                 Learn More
               </a>
             </div>

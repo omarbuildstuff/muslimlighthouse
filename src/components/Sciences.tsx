@@ -68,7 +68,7 @@ const Sciences = () => {
           
           <div className="divider"></div>
           <p className="text-navy-400 text-lg mb-8">
-          Some sciences are still not completely finished and are being taught in the weekly live lessons
+          New programs are introduced in our weekly live sessions based on these sciences
           </p>
         </div>
         

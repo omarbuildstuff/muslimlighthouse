@@ -46,7 +46,7 @@ const Hero = () => {
               </a>
               
               <a href="#free-lesson" className="secondary-button flex items-center gap-2 justify-center px-5 py-2.5 md:px-6 md:py-3 text-sm md:text-base">
-                <Play size={16} className="fill-lighthouse-500 md:w-[18px] md:h-[18px]" />
+                <Play size={16} className="fill-lighthouse-500 drop-shadow-2xl md:w-[18px] md:h-[18px]" stroke="none" />
                 Watch Free Lesson
               </a>
             </div>
@@ -59,7 +59,7 @@ const Hero = () => {
                 </div> : <AspectRatio ratio={16 / 9}>
                   <div className="absolute inset-0 flex items-center justify-center bg-navy-500/20 hover:bg-navy-500/10 transition-colors cursor-pointer group" onClick={handlePlayClick}>
                     <div className="w-14 h-14 md:w-20 md:h-20 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                      <Play size={20} className="fill-lighthouse-500 ml-1 md:w-[30px] md:h-[30px]" />
+                      <Play size={20} className="fill-lighthouse-500 drop-shadow-2xl ml-1 md:w-[30px] md:h-[30px]" stroke="none" />
                     </div>
                   </div>
                   <img src="https://img.youtube.com/vi/p6_2s_357_Q/maxresdefault.jpg" alt="Islamic education video preview" className="w-full h-full object-cover" />

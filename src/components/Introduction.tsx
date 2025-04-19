@@ -49,7 +49,7 @@ const Introduction = () => {
                     onClick={handlePlayClick}
                   >
                     <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                      <Play size={30} className="fill-lighthouse-500 ml-1" />
+                      <Play size={30} className="fill-lighthouse-500 drop-shadow-2xl ml-1" stroke="none" />
                     </div>
                   </div>
                   <img 

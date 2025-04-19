@@ -63,6 +63,9 @@ const Books = () => {
           </h2>
           
           <div className="divider"></div>
+          <p className="text-navy-400 text-lg mb-8">
+          New programs based on the books below are introduced in our weekly classes
+          </p>
         </div>
         
         <div className="relative w-full mb-12 max-w-6xl mx-auto">

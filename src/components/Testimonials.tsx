@@ -104,79 +104,8 @@ const Testimonials = () => {
         </div>
         
         <div className="relative max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-8 justify-center items-start">
-            {(window.innerWidth < 768 ? [0] : [0, 1]).map((offset) => {
-              const idx = (currentIndex + offset) % testimonials.length;
-              const testimonial = testimonials[idx];
-              return (
-                <div key={idx} className="bg-white border border-gray-200 p-8 md:p-12 rounded-3xl flex flex-col shadow-md">
-                  {/*<div className="text-lighthouse-300 mb-6">
-                    <Quote size={48} />
-                  </div>*/}
-                  <p className="text-xl md:text-2xl mb-4 text-navy-900 italic whitespace-pre-line">
-  {testimonial.quote.length > 200 ? (
-    <>
-      "{testimonial.quote.slice(0, 200).trim()}..."
-      <a
-        href="https://www.trustpilot.com/review/muslimlighthouse.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-navy-700 underline text-base font-normal not-italic hover:text-navy-900 transition-colors inline ml-2 align-baseline"
-        style={{ fontStyle: 'normal' }}
-      >
-        read more
-      </a>
-    </>
-  ) : (
-    `"${testimonial.quote}"`
-  )}
-</p>
-                  <div className="flex items-center gap-4 mt-auto">
-                    {/*<img 
-                      src={testimonial.image} 
-                      alt={testimonial.name} 
-                      className="w-14 h-14 rounded-full object-cover"
-                    />*/}
-                    <div>
-                      <h4 className="font-bold text-navy-900">{testimonial.name}</h4>
-                      <p className="text-lighthouse-500">{testimonial.title}</p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-          
-          <div className="flex justify-center gap-4 mt-8">
-            <button 
-              onClick={prevSlide}
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white"
-              aria-label="Previous testimonial"
-            >
-              <ChevronLeft size={24} />
-            </button>
-            
-            <button 
-              onClick={nextSlide}
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white"
-              aria-label="Next testimonial"
-            >
-              <ChevronRight size={24} />
-            </button>
-          </div>
-          
-          <div className="flex justify-center gap-2 mt-6">
-            {testimonials.map((_, index) => (
-              <button 
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all ${
-                  index === currentIndex ? 'bg-lighthouse-400 w-6' : 'bg-white/30'
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
-            ))}
-          </div>
+        <div id="shapo-widget-3fe790e6da7cc3303d2f"></div>
+        <script id="shapo-embed-js" type="text/javascript" src="https://cdn.shapo.io/js/embed.js" defer></script>
         </div>
       </div>
     </section>
