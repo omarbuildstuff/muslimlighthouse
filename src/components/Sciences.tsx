@@ -91,9 +91,9 @@ const Sciences = () => {
             <CarouselContent className="-ml-4">
               {sciencesList.map((science, index) => (
                 <CarouselItem key={science.name} className="pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                  <Card className="glass-card border-4 border-lighthouse-400 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden h-full min-h-[320px]"
+                  <Card className="glass-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden h-full min-h-[320px]"
                     style={{ animationDelay: `${index * 0.1}s` }}>
-                    <div className="relative h-48 overflow-hidden">
+                    <div className="relative w-full aspect-square overflow-hidden">
                       <img 
                         src={science.image} 
                         alt={science.name} 
