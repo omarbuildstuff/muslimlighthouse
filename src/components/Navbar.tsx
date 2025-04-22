@@ -11,7 +11,7 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'} rounded-2xl mt-2 w-[80%] mx-auto`}>
+  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isMobileMenuOpen ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'} ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'} rounded-2xl mt-2 w-[80%] mx-auto`}>
       <div className="flex items-center justify-between px-4">
         <a href="#" className="flex items-center gap-2">
           <img src="/lovable-uploads/318cf83b-5ea0-41fb-98e6-be0bf3b21ff4.png" alt="Muslim Lighthouse Logo" className="h-12 w-auto" />
@@ -35,9 +35,9 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && <div className="lg:hidden bg-white py-4 shadow-lg animate-in fade-in slide-in-from-top-5">
+      {isMobileMenuOpen && <div className="lg:hidden bg-white py-4 animate-in fade-in slide-in-from-top-5">
           <nav className="container mx-auto flex flex-col items-center gap-4">
-            <a href="#program" className="text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+            {/*<a href="#program" className="text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center font-medium" onClick={() => setIsMobileMenuOpen(false)}>
               Program
             </a>
             <a href="#sciences" className="text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center font-medium" onClick={() => setIsMobileMenuOpen(false)}>
@@ -45,7 +45,7 @@ const Navbar = () => {
             </a>
             <a href="#teachers" className="text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center font-medium" onClick={() => setIsMobileMenuOpen(false)}>
               Teachers
-            </a>
+            </a>*/}
             <a href="#testimonials" className="text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center font-medium" onClick={() => setIsMobileMenuOpen(false)}>
               Testimonials
             </a>

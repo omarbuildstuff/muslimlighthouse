@@ -4,7 +4,7 @@ const Pricing = () => {
   const features = [
     {
       icon: FileText,
-      text: "Scholarly syllabus"
+      text: "Scholarly syllabus course (with recordings)"
     },
     {
       icon: Video,
@@ -12,15 +12,15 @@ const Pricing = () => {
     },
     {
       icon: Users,
-      text: "Online Community of 200+ Students"
+      text: "Private Community of 200+ Students"
     },
     {
       icon: MessageSquare,
-      text: "Learn and engage with Ustadh Rhyad"
+      text: "Access to Rhyad and qualified teachers"
     },
     {
       icon: Calendar,
-      text: "Yearly in-person events"
+      text: "Yearly in-person meetups"
     }
   ];
   return <section id="pricing" className="section-padding bg-lighthouse-50/50">
@@ -52,47 +52,19 @@ const Pricing = () => {
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3">
                     <Check size={18} className="text-lighthouse-500" />
-                    <span className="text-navy-600">Scholarly syllabus based on the 9 science of Islam</span>
+                    <span className="text-navy-600">Access 100+ hours of content</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <Check size={18} className="text-lighthouse-500" />
-                    <span className="text-navy-600">Access to 100+ hours of content</span>
+                    <span className="text-navy-600">New content uploaded weekly</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <Check size={18} className="text-lighthouse-500" />
-                    <span className="text-navy-600">Bite size lessons of 20-30mins</span>
+                    <span className="text-navy-600">Learn the sciences at your own pace</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <Check size={18} className="text-lighthouse-500" />
-                    <span className="text-navy-600">Learn at your own pace and suited to your needs</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Check size={18} className="text-lighthouse-500" />
-                    <span className="text-navy-600">Live weekly classes delivering new content</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Check size={18} className="text-lighthouse-500" />
-                    <span className="text-navy-600">Opportunities to discuss and ask questions</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Check size={18} className="text-lighthouse-500" />
-                    <span className="text-navy-600">Access to Ustadh Rhyad</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Check size={18} className="text-lighthouse-500" />
-                    <span className="text-navy-600">Access to Student support</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Check size={18} className="text-lighthouse-500" />
-                    <span className="text-navy-600">Access to worldwide community of students</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Check size={18} className="text-lighthouse-500" />
-                    <span className="text-navy-600">Interact, seek advice and grow in learning together</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Check size={18} className="text-lighthouse-500" />
-                    <span className="text-navy-600">In-person Events across the year to build community</span>
+                    <span className="text-navy-600">Ask your questions and get support</span>
                   </li>
                 </ul>
               </div>
