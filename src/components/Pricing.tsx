@@ -116,7 +116,7 @@ const Pricing = () => {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-2xl">🌟</span>
-                <span className="text-navy-700">Weekly interactive events: <strong>Tazkir Tuesdays</strong>, <strong>Fiqh Fridays</strong>, <strong>Qiyam Saturdays</strong></span>
+                <span className="text-navy-700">Weekly interactive events: <strong>Tazkiyah Tuesdays</strong>, <strong>Fiqh Fridays</strong>, <strong>Qiyam Saturdays</strong></span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-2xl">🕌</span>
