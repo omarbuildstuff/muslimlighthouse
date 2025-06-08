@@ -30,7 +30,7 @@ const Pricing = () => {
         <div className="glass-card bg-white border border-gray-200 shadow-lg overflow-hidden w-full md:w-1/2">
           <div className="bg-gradient-to-r from-gray-800 to-gray-600 py-8 px-6 text-white text-center relative">
           <span className="top-4 left-1/2 -translate-x-1/2 bg-gray-200 text-navy-700 px-3 py-1 rounded-full text-xs font-semibold shadow-lg z-10">
-              Standard
+              Core Access
             </span>
             <h3 className="text-3xl font-bold mt-4 mb-2 flex items-center justify-center gap-2">
               Standard Subscription
@@ -105,6 +105,10 @@ const Pricing = () => {
               <li className="flex items-start gap-3">
                 <span className="text-2xl">📅</span>
                 <span className="text-navy-700"><strong>Live weekly sessions</strong> to interact, ask, and grow in real-time</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-2xl">🤝</span>
+                <span className="text-navy-700"><strong>Brothers-only & sisters-only weekly sessions</strong> – safe, supportive spaces to share doubts, ask personal questions, and connect deeply with others on the same path</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-2xl">🌐</span>
