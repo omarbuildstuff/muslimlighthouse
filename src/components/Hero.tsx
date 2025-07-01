@@ -22,7 +22,7 @@ const Hero = () => {
             <span className="gradient-text">Islamic lectures</span> don’t change you. <span className="gradient-text">Daily actions</span> do.
             </h1>
             
-            <p className="text-navy-400 text-base sm:text-lg md:text-xl mb-6 md:mb-6 max-w-xl mx-auto">
+            <p className="text-navy-600 text-base sm:text-lg md:text-xl mb-6 md:mb-6 max-w-xl mx-auto">
             Muslim Lighthouse doesn’t just teach Islam—it <strong>installs it</strong>. In your <strong>actions</strong>. In your <strong>habits</strong>. In your <strong>life</strong>.
             </p>
             
