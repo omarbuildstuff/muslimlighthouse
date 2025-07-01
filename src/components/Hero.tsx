@@ -23,7 +23,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-navy-400 text-base sm:text-lg md:text-xl mb-6 md:mb-6 max-w-xl mx-auto">
-            Muslim Lighthouse doesn’t just teach Islam—it installs it.<br></br>In your actions. In your habits. In your life.
+            Muslim Lighthouse doesn’t just teach Islam—it <strong>installs it</strong>. In your <strong>actions</strong>. In your <strong>habits</strong>. In your <strong>life</strong>.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-3 md:gap-4 mb-8  mx-auto max-w-full">
