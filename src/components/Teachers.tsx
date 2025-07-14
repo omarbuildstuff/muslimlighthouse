@@ -77,7 +77,7 @@ const Teachers = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto items-start">
           {teachers.map(teacher => <div key={teacher.name} className="glass-card overflow-hidden group">
               <div className="w-full overflow-hidden rounded-xl bg-white">
-                <img
+                <img loading="lazy"
                   src={teacher.image}
                   alt={teacher.name}
                   className="w-full object-cover rounded-xl shadow-lg"
