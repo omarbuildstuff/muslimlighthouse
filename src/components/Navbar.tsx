@@ -46,13 +46,13 @@ const Navbar = () => {
             <a href="#teachers" className="text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center font-medium" onClick={() => setIsMobileMenuOpen(false)}>
               Teachers
             </a>*/}
-            <a href="#testimonials" className="text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+            <a href="#testimonials" className="text-lg text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center font-medium" onClick={() => setIsMobileMenuOpen(false)}>
               Testimonials
             </a>
-            <a href="#pricing" className="text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center font-medium" onClick={() => setIsMobileMenuOpen(false)}>
+            <a href="#pricing" className="text-lg text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center font-medium" onClick={() => setIsMobileMenuOpen(false)}>
               Pricing
             </a>
-            <a href="#join-now" className="cta-button py-2 px-6 w-4/5 text-center" onClick={() => setIsMobileMenuOpen(false)}>
+            <a href="#join-now" className="cta-button py-2 px-6 w-4/5 text-center text-lg" onClick={() => setIsMobileMenuOpen(false)}>
               Join Now
             </a>
           </nav>

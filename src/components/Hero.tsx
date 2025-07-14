@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Play, Users, Calendar, BookOpen } from 'lucide-react';
+import { Play } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 const Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoId = "p6_2s_357_Q";
@@ -14,49 +15,57 @@ const Hero = () => {
     <feDropShadow dx="1.5" dy="1.5" stdDeviation="1" flood-color="black" flood-opacity="0.4" />
   </filter>
 </svg>
-  <section className="pt-12 pb-5 md:pt-16 md:pb-20 lg:pt-24 lg:pb-32 px-4 md:px-6 bg-gradient-to-b from-lighthouse-50/50 to-white min-h-screen flex items-center">
+  <section className="pt-12 pb-10 md:pt-16 md:pb-20 lg:pt-24 lg:pb-22 px-4 md:px-6 bg-gradient-to-b from-lighthouse-50/50 to-white min-h-screen flex items-center">
       <div className="container mx-auto mt-10">
         <div className="flex flex-col items-center text-center">
-          <div className="w-full max-w-4xl mt-5">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
+          <div className="w-full max-w-4xl mt-4 md:mt-5">
+            <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
             <span className="gradient-text">Islamic lectures</span> don’t change you. <span className="gradient-text">Daily actions</span> do.
             </h1>
             
-            <p className="text-navy-600 text-base sm:text-lg md:text-xl mb-6 md:mb-6 max-w-xl mx-auto">
+            <p className="text-navy-600 text-xl sm:text-lg md:text-xl mb-6 md:mb-6 max-w-xl mx-auto">
             Muslim Lighthouse doesn’t just teach Islam—it <strong>installs it</strong>. In your <strong>actions</strong>. In your <strong>habits</strong>. In your <strong>life</strong>.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-3 md:gap-4 mb-8  mx-auto max-w-full">
-              <div className="flex items-center gap-3 bg-lighthouse-50/70 p-3 rounded-lg text-left">
-                <div className="bg-lighthouse-100 p-2 rounded-full text-lighthouse-600 flex-shrink-0">
-                  <Users size={16} />
-                </div>
-                <p className="text-navy-600 text-sm md:text-base">Interact with teachers and students in our community</p>
-              </div>
-              <div className="flex items-center gap-3 bg-lighthouse-50/70 p-3 rounded-lg text-left">
-                <div className="bg-lighthouse-100 p-2 rounded-full text-lighthouse-600 flex-shrink-0">
-                  <Calendar size={16} />
-                </div>
-                <p className="text-navy-600 text-sm md:text-base">Multiple weekly live classes to maximize benefit</p>
-              </div>
-              <div className="flex items-center gap-3 bg-lighthouse-50/70 p-3 rounded-lg text-left">
-                <div className="bg-lighthouse-100 p-2 rounded-full text-lighthouse-600 flex-shrink-0">
-                  <BookOpen size={16} />
-                </div>
-                <p className="text-navy-600 text-sm md:text-base">Learn from concise courses to level up knowledge</p>
-              </div>
-            </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 md:mb-16">
-              <a href="https://www.muslimlighthouse.app/checkout/premium-membership" className="cta-button animate-pulse-light px-6 py-3 md:px-8 md:py-4 text-sm md:text-base">
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12 mb-4 md:mb-6">
+              <a href="https://www.muslimlighthouse.app/checkout/premium-membership" className="cta-button animate-pulse-light px-6 py-3 md:px-8 md:py-4 text-base md:text-base">
                 Join Now
               </a>
               
-              <a href="#free-lesson" className="secondary-button flex items-center gap-2 justify-center px-5 py-2.5 md:px-6 md:py-3 text-sm md:text-base">
+              <a href="#free-lesson" className="secondary-button flex items-center gap-2 justify-center px-5 py-2.5 md:px-6 md:py-3 text-base md:text-base">
                 <Play size={16} className="fill-lighthouse-500 drop-shadow-2xl md:w-[18px] md:h-[18px]" stroke="none" />
                 Watch Free Lesson
               </a>
             </div>
+
+            <div className="flex items-center justify-center gap-4 mb-8 mx-auto max-w-full">
+  <div className="flex -space-x-3">
+    {/* Example avatars, replace src with actual student images if available */}
+    <Avatar>
+      <AvatarImage src="/images/avatar1.jpeg" alt="Student 1" loading="lazy" />
+      <AvatarFallback>AB</AvatarFallback>
+    </Avatar>
+    <Avatar>
+      <AvatarImage src="/images/avatar2.jpeg" alt="Student 2" loading="lazy" />
+      <AvatarFallback>CD</AvatarFallback>
+    </Avatar>
+    <Avatar>
+      <AvatarImage src="/images/avatar3.jpeg" alt="Student 3" loading="lazy" />
+      <AvatarFallback>EF</AvatarFallback>
+    </Avatar>
+    <Avatar>
+      <AvatarImage src="/images/avatar4.png" alt="Student 4" loading="lazy" />
+      <AvatarFallback>GH</AvatarFallback>
+    </Avatar>
+    <Avatar>
+      <AvatarImage src="/images/avatar5.jpg" alt="Student 5" loading="lazy" />
+      <AvatarFallback>GH</AvatarFallback>
+    </Avatar>
+  </div>
+  <span className="text-navy-600 text-base md:text-lg font-semibold ml-4 whitespace-nowrap">230+ students globally</span>
+</div>
           </div>
           
           <div className="w-full max-w-3xl animate-float">

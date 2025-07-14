@@ -79,7 +79,7 @@
   }
 
   .glass-card {
-    @apply bg-white/70 backdrop-blur-sm border border-white/50 shadow-lg rounded-xl md:rounded-2xl;
+    @apply bg-white/30 backdrop-blur-md border border-white/20 shadow-lg rounded-xl md:rounded-2xl;
   }
 
   .divider {

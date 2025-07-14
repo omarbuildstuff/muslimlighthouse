@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check, BookOpen, Video, Users, MessageSquare, FileText, Calendar } from 'lucide-react';
+
 const Pricing = () => {
   const features = [
     {
@@ -42,7 +43,7 @@ const Pricing = () => {
             </div>
           </div>
           <div className="p-6 md:p-8">
-            <ul className="space-y-5 mb-8">
+            <ul className="space-y-5 mb-8 text-left">
               <li className="flex items-start gap-3">
                 <span className="text-2xl">📚</span>
                 <span className="text-navy-700">Full access to <strong>100+ hours</strong> of structured Islamic course recordings</span>
@@ -78,7 +79,7 @@ const Pricing = () => {
           </div>
         </div>
         {/* Premium Subscription Card */}
-        <div className="glass-card overflow-hidden w-full md:w-1/2">
+        <div className="glass-card overflow-hidden bg-white w-full md:w-1/2">
           <div className="bg-gradient-to-r from-lighthouse-600 to-lighthouse-500 py-8 px-6 text-white text-center relative">
             <span className="top-4 left-1/2 -translate-x-1/2 bg-lighthouse-200 text-navy-700 px-3 py-1 rounded-full text-xs font-semibold shadow-lg z-10">
               Most Popular
@@ -94,7 +95,7 @@ const Pricing = () => {
           </div>
 
           <div className="p-6 md:p-10">
-            <ul className="space-y-5 mb-8">
+            <ul className="space-y-5 mb-8 text-left">
               <li className="flex items-start gap-3">
                  <span className="text-navy-700">Everything in Standard – <strong>PLUS:</strong></span>
               </li>
@@ -145,6 +146,11 @@ const Pricing = () => {
           </div>
         </div>
       </div>
+
+
+
+
+
     </div>
   </section>;
 };
