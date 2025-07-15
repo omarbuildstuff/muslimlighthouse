@@ -188,6 +188,9 @@ const PathSection = () => {
   return (
   <section className="bg-lighthouse-900 py-10 md:py-20 pb-10 relative">
     <div className="relative z-10 mx-auto py-10 md:max-w-6xl md:px-4">
+      <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
+        Your Journey In <span className="text-lighthouse-200">Muslim Lighthouse</span>
+      </h2>
       {/* Step 1: Illuminate Program */}
       <motion.div 
         ref={step1Ref}

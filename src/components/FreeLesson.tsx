@@ -42,7 +42,7 @@ const FreeLesson = () => {
               
               {/* Second Video */}
               <div className="glass-card bg-navy-50/80 rounded-xl shadow px-4 py-3 mb-2 text-lg md:text-xl font-semibold text-lighthouse-500 text-center tracking-tight">
-                Sound Heart <span className="text-navy-600 text-sm md:text-base font-semibold">— Is Your Heart Dirty?</span>
+                Sound Heart <span className="text-navy-600 font-semibold">— Is Your Heart Dirty?</span>
               </div>
               <div className="video-container relative overflow-hidden rounded-3xl shadow-xl border-4 border-white">
                 {isPlaying2 ? <div className="w-full aspect-video">

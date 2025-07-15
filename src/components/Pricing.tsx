@@ -50,7 +50,7 @@ const Pricing = () => {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-2xl">🕋</span>
-                <span className="text-navy-700">Learn from <strong>authentic scholarly books</strong> following the Mauritanian tradition</span>
+                <span className="text-navy-700">Learn from <strong>authentic scholarly books</strong></span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-2xl">♻️</span>
@@ -121,7 +121,7 @@ const Pricing = () => {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-2xl">🌟</span>
-                <span className="text-navy-700">Weekly interactive events: <strong>Tazkiyah Tuesdays</strong>, <strong>Fiqh Fridays</strong>, <strong>Qiyam Saturdays</strong></span>
+                <span className="text-navy-700">Build weekly habits: <strong>Dawah Monday</strong>, <strong>Tadabbur Tuesdays</strong>, <strong>Thikr Thursdays</strong>, <strong>Qiyam Saturdays</strong></span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-2xl">🕌</span>

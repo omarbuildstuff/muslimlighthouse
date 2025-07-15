@@ -30,11 +30,11 @@ const Hero = () => {
             
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12 mb-4 md:mb-6">
-              <a href="https://www.muslimlighthouse.app/checkout/premium-membership" className="cta-button animate-pulse-light px-6 py-3 md:px-8 md:py-4 text-base md:text-base">
+              <a href="https://www.muslimlighthouse.app/checkout/premium-membership" className="cta-button animate-pulse-light px-6 py-3 md:px-8 md:py-4 text-lg md:text-lg">
                 Join Now
               </a>
               
-              <a href="#free-lesson" className="secondary-button flex items-center gap-2 justify-center px-5 py-2.5 md:px-6 md:py-3 text-base md:text-base">
+              <a href="#free-lesson" className="secondary-button flex items-center gap-2 justify-center px-5 py-2.5 md:px-6 md:py-3 text-lg md:text-lg">
                 <Play size={16} className="fill-lighthouse-500 drop-shadow-2xl md:w-[18px] md:h-[18px]" stroke="none" />
                 Watch Free Lesson
               </a>

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
 
-import { ChevronDown, BookOpen, Heart, Users, CheckCircle } from "lucide-react";
+import { ChevronDown, BookOpen, Heart, Users, CheckCircle, Lock } from "lucide-react";
 
 
 
 
 function Dropdown({ label, items, open, setOpen, otherOpen, setOtherOpen, selected, setSelected }: {
   label: string;
-  items: { title: string; main: string; sub: string; image: string; imageAlt: string }[];
+  items: { title: string; main: string; sub: string; image: string; imageAlt: string; locked?: boolean }[];
   open: boolean;
   setOpen: (v: boolean) => void;
   otherOpen: boolean;
@@ -53,9 +53,17 @@ function Dropdown({ label, items, open, setOpen, otherOpen, setOtherOpen, select
           {items.map((item, i) => (
             <div
               key={i}
-              className={`px-5 py-4 flex items-start gap-4 hover:bg-lighthouse-50 transition cursor-pointer ${i !== items.length - 1 ? 'border-b border-lighthouse-100' : ''} ${selected && selected.title === item.title ? 'bg-lighthouse-50 ring-2 ring-lighthouse-300' : ''}`}
-              onClick={() => handleSelect(item)}
+              className={`px-5 py-4 flex items-start gap-4 hover:bg-lighthouse-50 transition cursor-pointer relative ${item.locked ? 'opacity-50 pointer-events-none' : ''} ${i !== items.length - 1 ? 'border-b border-lighthouse-100' : ''} ${selected && selected.title === item.title ? 'bg-lighthouse-50 ring-2 ring-lighthouse-300' : ''}`}
+              onClick={() => !item.locked && handleSelect(item)}
             >
+              {item.locked && (
+                <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-60 z-10 rounded-xl">
+                  <div className="text-center">
+                    <Lock className="w-8 h-8 text-navy-800 mx-auto mb-2" />
+                    <span className="text-navy-800 font-semibold text-lg">Releasing Soon</span>
+                  </div>
+                </div>
+              )}
               <img src={item.image} alt={item.imageAlt} className="w-14 h-14 rounded-lg object-cover flex-shrink-0 mt-0.5" loading="lazy" />
               <div className="flex-1 min-w-0 text-left">
                 <div className="font-semibold text-lighthouse-700 text-base md:text-lg mb-1 truncate flex items-center">
@@ -110,34 +118,6 @@ const TopicsHabitsDropdown: React.FC<TopicsHabitsDropdownProps> = ({ only }) => 
       imageAlt: "Fiqh",
     },
     {
-      title: "Hadith Sciences",
-      main: "Discover how scholars preserved the Prophet’s ﷺ words — and learn which hadiths are authentic.",
-      sub: "Build confidence in the Sunnah. Know what to trust.",
-      image: "/images/hadith-sciences-bg.jpg",
-      imageAlt: "Hadith Sciences",
-    },
-    {
-      title: "Hadith",
-      main: "Study the actual words, wisdom, and actions of the Prophet ﷺ.",
-      sub: "Connect with his ﷺ life, teachings, and legacy — directly.",
-      image: "/images/tajweed-bg.jpg", // Using TajweedImage as a placeholder
-      imageAlt: "Hadith",
-    },
-    {
-      title: "Logic",
-      main: "Train your mind to think clearly, avoid contradictions, and spot flawed arguments.",
-      sub: "Sharpen your reasoning. Protect your beliefs.",
-      image: "/images/aqeedah-bg.png", // Using AqeedahImage as a placeholder
-      imageAlt: "Logic",
-    },
-    {
-      title: "Seerah",
-      main: "Walk through the life of the Prophet ﷺ — not as a story, but as a guide for your own journey.",
-      sub: "Real events. Real lessons. A roadmap to living Islam.",
-      image: "/images/seerah-bg.jpg",
-      imageAlt: "Seerah",
-    },
-    {
       title: "Tafsir",
       main: "Go beyond reading — understand what Allah ﷻ is really saying in His Book.",
       sub: "Discover meanings, context, and the beauty of divine speech.",
@@ -152,11 +132,36 @@ const TopicsHabitsDropdown: React.FC<TopicsHabitsDropdownProps> = ({ only }) => 
       imageAlt: "Tazkiyah",
     },
     {
+      title: "Seerah",
+      main: "Walk through the life of the Prophet ﷺ — not as a story, but as a guide for your own journey.",
+      sub: "Real events. Real lessons. A roadmap to living Islam.",
+      image: "/images/seerah-bg.jpg",
+      imageAlt: "Seerah",
+      locked: true,
+    },
+    {
       title: "Usul Al-Fiqh",
       main: "Learn the tools scholars use to derive rulings from the Qur’an and Sunnah.",
       sub: "Go beyond the “what” — understand the “why” behind the rulings.",
       image: "/images/usul-bg.jpg",
       imageAlt: "Usul Al-Fiqh",
+      locked: true,
+    },
+    {
+      title: "Hadith",
+      main: "Explore the sayings and actions of the Prophet ﷺ, understanding their context and wisdom.",
+      sub: "The practical application of the Quran in the life of the Prophet.",
+      image: "/images/tajweed-bg.jpg",
+      imageAlt: "Hadith",
+      locked: true,
+    },
+    {
+      title: "Logic",
+      main: "Sharpen your mind and critical thinking skills with the foundational science of Logic.",
+      sub: "Understand how to reason correctly and identify fallacies.",
+      image: "/images/aqeedah-bg.png",
+      imageAlt: "Logic",
+      locked: true,
     },
   ];
 
