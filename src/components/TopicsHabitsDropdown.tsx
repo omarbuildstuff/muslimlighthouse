@@ -132,6 +132,13 @@ const TopicsHabitsDropdown: React.FC<TopicsHabitsDropdownProps> = ({ only }) => 
       imageAlt: "Tazkiyah",
     },
     {
+      title: "Hadith Sciences",
+      main: "Discover how scholars preserved the Prophet’s ﷺ words — and learn which hadiths are authentic.",
+      sub: "Build confidence in the Sunnah. Know what to trust.",
+      image: "/images/hadith-sciences-bg.jpg",
+      imageAlt: "Hadith Sciences",
+    },
+    {
       title: "Seerah",
       main: "Walk through the life of the Prophet ﷺ — not as a story, but as a guide for your own journey.",
       sub: "Real events. Real lessons. A roadmap to living Islam.",
