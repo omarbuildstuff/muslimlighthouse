@@ -21,6 +21,14 @@ export default function ReviewCarousel() {
   const [current, setCurrent] = useState(0);
   const dialogRef = useRef<HTMLDivElement>(null);
 
+  // Preload images
+  useEffect(() => {
+    reviewImages.forEach((imageSrc) => {
+      const img = new Image();
+      img.src = imageSrc;
+    });
+  }, []);
+
   // Accessibility: Focus trap
   useEffect(() => {
     if (open && dialogRef.current) {
