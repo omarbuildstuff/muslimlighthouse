@@ -52,7 +52,7 @@ const Navbar = () => {
             <a href="#pricing" className="text-lg text-navy-500 hover:text-lighthouse-500 transition-colors py-2 w-full text-center font-medium" onClick={() => setIsMobileMenuOpen(false)}>
               Pricing
             </a>
-            <a href="#join-now" className="cta-button py-2 px-6 w-4/5 text-center text-lg" onClick={() => setIsMobileMenuOpen(false)}>
+            <a href="https://www.muslimlighthouse.app/checkout/premium-membership" className="cta-button py-2 px-6 w-4/5 text-center text-lg" onClick={() => setIsMobileMenuOpen(false)}>
               Join Now
             </a>
           </nav>
