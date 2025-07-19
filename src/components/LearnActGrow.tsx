@@ -77,6 +77,14 @@ const LearnActGrow = () => {
         </div>
 
         <div {...handlers} className="relative w-full max-w-3xl mx-auto min-h-[500px] py-8">
+          {/* Mobile Swipe Indicator */}
+          <div className="absolute top-4 right-4 z-30 md:hidden flex items-center gap-2 bg-white/80 backdrop-blur-sm px-3 py-2 rounded-full shadow-lg">
+            <span className="text-xs text-gray-600 font-medium">Swipe</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-gray-500 animate-pulse">
+              <path d="M8 12h8M12 8l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M4 12h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.5"/>
+            </svg>
+          </div>
           {items.map((item, index) => (
             <div
               key={index}

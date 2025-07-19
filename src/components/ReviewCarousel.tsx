@@ -130,7 +130,7 @@ export default function ReviewCarousel() {
             }}
           >
             <motion.div 
-              className="relative w-full max-w-2xl mx-auto rounded-xl overflow-hidden shadow-xl bg-white p-0 flex flex-col items-center"
+              className="relative w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-xl p-0 flex flex-col items-center"
               initial={{ opacity: 0, y: 20, scale: 0.98 }}
               animate={{ 
                 opacity: 1, 
@@ -163,10 +163,10 @@ export default function ReviewCarousel() {
             <img
               src={reviewImages[current]}
               alt={`Review ${current + 1}`}
-              className="w-full h-[55vw] max-h-[70vh] object-contain bg-white rounded-xl"
+              className="w-full h-[55vw] max-h-[70vh] object-contain rounded-xl"
               style={{maxWidth: 600}}
             />
-            <div className="flex justify-between items-center w-full px-4 mt-2 mb-3">
+            <div className="flex justify-between items-center w-full px-4 mt-2 mb-3 bg-white rounded-xl">
               <button
                 className="bg-white/80 hover:bg-lighthouse-50 rounded-full p-2 shadow transition"
                 onClick={prev}
