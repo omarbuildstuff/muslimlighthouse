@@ -139,6 +139,14 @@ const TopicsHabitsDropdown: React.FC<TopicsHabitsDropdownProps> = ({ only }) => 
       imageAlt: "Hadith Sciences",
     },
     {
+      title: "Tajweed",
+      main: "Learn the science of Quran recitation and its rules.",
+      sub: "Improve your Quran recitation and understanding of Quranic recitation.",
+      image: "/images/tajweed-bg.jpg",
+      imageAlt: "Tajweed",
+      locked: true,
+    },
+    {
       title: "Seerah",
       main: "Walk through the life of the Prophet ﷺ — not as a story, but as a guide for your own journey.",
       sub: "Real events. Real lessons. A roadmap to living Islam.",
@@ -158,7 +166,7 @@ const TopicsHabitsDropdown: React.FC<TopicsHabitsDropdownProps> = ({ only }) => 
       title: "Hadith",
       main: "Explore the sayings and actions of the Prophet ﷺ, understanding their context and wisdom.",
       sub: "The practical application of the Quran in the life of the Prophet.",
-      image: "/images/tajweed-bg.jpg",
+      image: "/images/hadith-sciences-bg.jpg",
       imageAlt: "Hadith",
       locked: true,
     },
@@ -174,11 +182,11 @@ const TopicsHabitsDropdown: React.FC<TopicsHabitsDropdownProps> = ({ only }) => 
 
   const habits = [
     {
-      title: "Dawah Mondays",
-      main: "Each Monday, students share one way they brought someone closer to Islam.",
-      sub: "A weekly habit of leaving an impact on the Ummah.",
-      image: "/images/dawah.png",
-      imageAlt: "Dawah Mondays",
+      title: "Fasting Mondays",
+      main: "Each Monday, the whole community fasts together for the sake of Allah.",
+      sub: "A weekly habit that tames the nafs and strengthens the iman.",
+      image: "/images/fasting.png",
+      imageAlt: "Fasting Mondays",
     },
     {
       title: "Tadabbur Tuesdays",

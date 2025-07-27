@@ -121,7 +121,7 @@ const Pricing = () => {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-2xl">🌟</span>
-                <span className="text-navy-700">Build weekly habits: <strong>Dawah Monday</strong>, <strong>Tadabbur Tuesdays</strong>, <strong>Thikr Thursdays</strong>, <strong>Qiyam Saturdays</strong></span>
+                <span className="text-navy-700">Build weekly habits: <strong>Fasting Monday</strong>, <strong>Tadabbur Tuesdays</strong>, <strong>Thikr Thursdays</strong>, <strong>Qiyam Saturdays</strong></span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-2xl">🕌</span>
