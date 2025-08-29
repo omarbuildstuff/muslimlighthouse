@@ -36,7 +36,7 @@ const Pricing = () => {
             <h3 className="text-3xl font-bold mt-4 mb-2 flex items-center justify-center gap-2">
               Standard Subscription
             </h3>
-            <p className="opacity-90 mb-4 text-lg">Access to foundational knowledge at your own pace, from your own home.</p>
+            <p className="opacity-90 mb-4 text-lg">Learn on your own, at your own pace.</p>
             <div className="flex justify-center items-baseline mb-2">
               <span className="text-5xl font-bold">$10</span>
               <span className="text-lg opacity-80 ml-1">/month</span>
@@ -46,32 +46,24 @@ const Pricing = () => {
             <ul className="space-y-5 mb-8 text-left">
               <li className="flex items-start gap-3">
                 <span className="text-2xl">📚</span>
-                <span className="text-navy-700">Full access to <strong>100+ hours</strong> of structured Islamic course recordings</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-2xl">🕋</span>
-                <span className="text-navy-700">Learn from <strong>authentic scholarly books</strong></span>
+                <span className="text-navy-700">Full access to <strong>all courses</strong></span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-2xl">♻️</span>
-                <span className="text-navy-700">New content added every single week — stay connected to a growing library of sacred knowledge</span>
+                <span className="text-navy-700">New content added <strong>every week</strong></span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-2xl">🧠</span>
-                <span className="text-navy-700">Study at your own pace, on your own schedule</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-2xl">🛠️</span>
-                <span className="text-navy-700">Great for independent learners who want a reliable syllabus without community features</span>
+                <span className="text-2xl">🕌</span>
+                <span className="text-navy-700">Invitation to <strong>in-person events</strong> to strengthen bonds & recharge your imān</span>
               </li>
             </ul>
             <div className="bg-navy-50 rounded-xl p-6 mb-8">
               <p className="text-navy-700 text-base text-center">
-                👉 <strong>Upgrade anytime</strong> to access the teacher, community, and live sessions.
+                👉 Good if you just want the knowledge <strong>without the community or guidance</strong>.
               </p>
             </div>
             <a href="https://www.muslimlighthouse.app/checkout/standard-membership" className="cta-button w-full flex justify-center text-lg bg-navy-500 hover:bg-navy-600 text-white">
-            Join Now
+            Start with Courses Only
             </a>
             <p className="text-center text-navy-400 mt-4 text-sm">
               Cancel anytime. No long-term commitment required.
@@ -87,7 +79,7 @@ const Pricing = () => {
             <h3 className="text-3xl font-bold mt-4 mb-2 flex items-center justify-center gap-2">
               Premium Subscription
             </h3>
-            <p className="opacity-90 mb-4 text-lg">Your all-in-one path to deep Islamic knowledge, mentorship & community.</p>
+            <p className="opacity-90 mb-4 text-lg">Build lasting habits, not just knowledge.</p>
             <div className="flex justify-center items-baseline mb-2">
               <span className="text-5xl font-bold">$37</span>
               <span className="text-xl opacity-80 ml-1">/month</span>
@@ -112,34 +104,21 @@ const Pricing = () => {
                 <span className="text-navy-700"><strong>Brothers-only & sisters-only weekly sessions</strong> – safe, supportive spaces to share doubts, ask personal questions, and connect deeply with others on the same path</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-2xl">🌐</span>
-                <span className="text-navy-700"><strong>Private community of 200+ committed students</strong> – study, grow & connect together</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-2xl">🤝</span>
-                <span className="text-navy-700"><strong>Build real friendships</strong> with like-hearted Muslims from around the world</span>
+                <span className="text-2xl">🚻</span>
+                <span className="text-navy-700"><strong>Private, segregated community for brothers & sisters</strong> – study, grow & connect together</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-2xl">🌟</span>
                 <span className="text-navy-700">Build weekly habits: <strong>Fasting Monday</strong>, <strong>Tadabbur Tuesdays</strong>, <strong>Thikr Thursdays</strong>, <strong>Qiyam Saturdays</strong></span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="text-2xl">🕌</span>
-                <span className="text-navy-700"><strong>Annual in-person meetups</strong> to strengthen bonds & recharge your imān</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-2xl">💡</span>
-                <span className="text-navy-700">Perfect for those serious about transforming their life through sacred knowledge</span>
-              </li>
             </ul>
             <div className="bg-lighthouse-50 rounded-xl p-6 mb-8">
               <p className="text-navy-700 text-base text-center">
-                👉 <strong>If you’re ready to commit to growth</strong>, the Premium plan is where hearts awaken.
+                👉 <strong>Knowledge fades. Habits shape who you become.</strong> This keeps you on track every single week.
               </p>
             </div>
             <a id="join-now" href="https://www.muslimlighthouse.app/checkout/premium-membership" className="cta-button w-full flex justify-center text-lg">
-              Join Now
-            </a>
+            Join Today — Build Your Habits           </a>
             <p className="text-center text-navy-400 mt-4 text-sm">
               Cancel anytime. No long-term commitment required.
             </p>
