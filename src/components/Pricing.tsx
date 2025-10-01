@@ -81,7 +81,7 @@ const Pricing = () => {
             </h3>
             <p className="opacity-90 mb-4 text-lg">Build lasting habits, not just knowledge.</p>
             <div className="flex justify-center items-baseline mb-2">
-              <span className="text-5xl font-bold">$37</span>
+              <span className="text-5xl font-bold">$29</span>
               <span className="text-xl opacity-80 ml-1">/month</span>
             </div>
           </div>
