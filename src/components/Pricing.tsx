@@ -38,7 +38,7 @@ const Pricing = () => {
             </h3>
             <p className="opacity-90 mb-4 text-lg">Learn on your own, at your own pace.</p>
             <div className="flex justify-center items-baseline mb-2">
-              <span className="text-5xl font-bold">$10</span>
+              <span className="text-5xl font-bold">$9</span>
               <span className="text-lg opacity-80 ml-1">/month</span>
             </div>
           </div>
