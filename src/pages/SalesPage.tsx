@@ -684,7 +684,7 @@ const SalesPage: React.FC = () => {
           <div className="container max-w-5xl mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <img src="../public/lovable-uploads/rhyad.jpg" alt="Ustadh Rhyad" className="rounded-lg shadow-2xl w-full"/>
+                <img src="/lovable-uploads/rhyad.jpg" alt="Ustadh Rhyad" className="rounded-lg shadow-2xl w-full"/>
               </div>
               <div>
                 <SectionTitle icon={<Users className="w-12 h-12 text-lighthouse-500" />}>Your Teacher</SectionTitle>
